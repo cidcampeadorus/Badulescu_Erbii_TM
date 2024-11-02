@@ -8,5 +8,7 @@ menu.addEventListener('click', function() {
 
 
 
-
+function sendEmail() {
+    window.location.href = "mailto:david.bdlsc@eduge.ch?subject=Contact%20ChavaMaths&body=Bonjour,";
+}
 
