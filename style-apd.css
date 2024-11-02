@@ -1,7 +1,7 @@
 /* Font and Base Styles */
 body {
-  font-family: 'Kumbh Sans', sans-serif;
-  background-color: #141414; 
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: #141414;
   margin: 0;
   padding: 0;
 }
@@ -10,7 +10,7 @@ body {
   background-color: #141414;
 }
 
-.main__container {  
+.main__container {
   display: block;
   align-items: center;
   justify-self: center;
@@ -41,7 +41,6 @@ body {
   text-align: center;
   margin-bottom: 1.5rem;
 }
-
 
 .main__content p {
   margin-top: 1rem;
@@ -85,7 +84,7 @@ body {
 
 .social__btn:after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   width: 0;
@@ -106,60 +105,60 @@ body {
 }
 
 .main__text {
-    text-align: justify;
-    margin-bottom: 3rem;
+  text-align: justify;
+  margin-bottom: 3rem;
 }
 
 .main__text p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #ffffff91;
-    margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ffffff91;
+  margin-bottom: 1.5rem;
 }
 
 @media screen and (max-width: 768px) {
   .main__container {
-      height: auto;
-      padding: 50px 20px;
+    height: auto;
+    padding: 50px 20px;
   }
 
   .main__content h1 {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
 
   .main__content h2 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .main__content p {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 
   .social__links {
-      flex-direction: column;
+    flex-direction: column;
   }
 }
 
 h3 {
-    text-align: center;
-    font-size: 1.8rem;
-    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 2rem 0;
-    padding: 0.5rem;
-    font-weight: bold;
-    position: relative;
+  text-align: center;
+  font-size: 1.8rem;
+  background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 2rem 0;
+  padding: 0.5rem;
+  font-weight: bold;
+  position: relative;
 }
 
 h3:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 3px;
-    background-image: linear-gradient(to right, #f77062 0%, #fe5196 100%);
-    border-radius: 2px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-image: linear-gradient(to right, #f77062 0%, #fe5196 100%);
+  border-radius: 2px;
 }
