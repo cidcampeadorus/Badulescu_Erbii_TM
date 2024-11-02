@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thèmes de Mathématiques</title>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="html2pdf.bundle.min.js"></script>
+
+
+  <link href="./style-theorie.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo">CHAVAMATHS</a>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a href="index.html" class="navbar__links">Accueil</a>
+        </li>
+        <li class="navbar__item">
+          <a href="theorie.html" class="navbar__links">Théorie</a>
+        </li>
+        <li class="navbar__item">
+          <a href="exercices.html" class="navbar__links">Exercices</a>
+        </li>
+        <li class="navbar__btn">
+          <a href="./A_propos_de_nous.html" class="button">A propos de nous</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <button onclick="imprimerSection()" class="print-button">Imprimer cette Théorie</button>
+
+
+
+
+  <div class="main__content">
+    <div class="texte__theorie" id="textetheo">
+
+      <h1 class="sous-titre">Limite d'une fonction</h1>
+      <h2>§1.1.1. Introduction et définition</h2>
+      <p><b>Définition :</b> Soit une fonction définie au voisinage de \( a \) (proche de \( a \), mais pas forcément en
+        \( a \)). On dira que
+        \( \lim_{x \to a} f(x) = L \)
+        si pour des valeurs de \( x \) suffisamment proches de \( a \), mais différentes de \( a \), \( f(x) \) se
+        rapproche aussi près qu'on veut de \( L \).
+      </p>
+      <p>Cette expression se lit "la limite de \( x \) qui tend vers \( a \) de \( f(x) \) est égale à \( L \)".</p>
+
+      <p><b>Remarques :</b></p>
+      <ol>
+        <li> \( \lim_{x \to a} f(x) = L \) ne veut pas dire que \( f(a) = L \).</li>
+        <li> La valeur de \( a \) ne doit pas nécessairement appartenir au domaine de définition de \( f \). Dans la
+          majorité des cas, \( a \notin D_f \).</li>
+        <li> Il existe une définition mathématique plus formelle de la limite d'une fonction. Nous ne l'aborderons pas
+          dans ce cours.</li>
+      </ol>
+
+      <h2>§1.1.2 Limites à gauche, limite à droite</h2>
+      <p><b>Exemples :</b></p>
+      <p>Prenons la fonction :</p>
+      <div style="text-align: center;">
+        <p>
+          \( f(x) = \begin{cases}
+          x & \text{si } x < 1 \\ x+1 & \text{si } x=> 1
+            \end{cases} \)
+        </p>
+      </div>
+      <center><img src="images/fg.png" alt="image-fg"></center>
+      <div><h3>On remarque :</h3>
+        <ul>
+          <li>Lorsque \( x \) se rapproche de \( 1 \) par des valeurs inférieures à \( 1 \) (par la gauche), \( f(x) \)
+          se rapproche de \( 1 \). On note alors
+          \( \lim_{x \to 1^-} f(x) = 1 \)</li>
+          <li>Lorsque \( x \) se rapproche de \( 1 \) par des valeurs supérieures à \( 1 \) (par la droite), \( f(x) \)
+          se rapproche de \( 2 \). On note alors
+          \( \lim_{x \to 1^+} f(x) = 2 \)</li>
+      </ul>
+      </div>
+
+      <p>Qu'en est-il de la valeur \( \lim_{x \to 1} f(x) \) ? La limite n'existe pas !</p>
+
+      <h3><b>Plus généralement</b></h3>
+      <p>On dira que la limite existe si la limite à gauche vaut la limite à droite. Graphiquement, cela signifie que
+        les deux «bouts» de la courbe arrivent au même point.</p>
+
+      <ol>
+        <li> \( \lim_{x \to a^-} f(x) \) est la limite de \( f(x) \) lorsque \( x \) tend vers \( a \) par la gauche
+          (par des valeurs inférieures à \( a \)).</li>
+        <li> \( \lim_{x \to a^+} f(x) \) est la limite de \( f(x) \) lorsque \( x \) tend vers \( a \) par la droite
+          (par des valeurs supérieures à \( a \)).</li>
+        <li>
+          \( \lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x) = L \iff \lim_{x \to a} f(x) = L \)
+          (la limite existe)
+        </li>
+        <li>
+          \( \lim_{x \to a^-} f(x) \neq \lim_{x \to a^+} f(x) \iff \lim_{x \to a} f(x) \)
+          n'existe pas
+        </li>
+      </ol>
+
+      <h2>§1.1.2. Propriétés des limites</h2>
+      <center><img src="images/tableau.png" alt="tableau-propriété"></center>
+
+      <h2>§1.1.3. Calculs des limites</h2>
+      <div><h3>Lorsqu'on calcule une limite, on peut obtenir :</h3>
+        <ol>
+          <li>un nombre réel ;</li>
+          <li>\( +\infty \) ou \( -\infty \) ;</li>
+          <li>une forme indéterminée telle que \( \frac{0}{0} \), \( \frac{\infty}{\infty} \), \( \infty - \infty \).
+          </li>
+        </ol>
+      </div>
+
+      <h3>1. La limite est un nombre réel</h3>
+      <div>
+        <p><b>Exemple : </b>
+          \( \lim_{x \to 3} (3x^2 - 7x - 1) = 3 \cdot 3^2 - 7 \cdot 3 - 1 = 27 - 21 - 1 = 5 \)
+        </p>
+      </div>
+      <h3>2. La limite est une forme \( +\infty \) ou \( -\infty \)</h3>
+      <p>
+        <b>Exemples :</b>
+      </p>
+      <div>
+        <p>
+          \( \lim_{x \to -\infty} (3x + 1) = 3 \cdot (-\infty) + 1 -> (négligeable) = -\infty \)
+        </p>
+
+        <p>
+          \( \lim_{x \to +\infty} (3x + 1) = +\infty \)
+        </p>
+
+        <p>
+          \( \lim_{x \to -\infty} (-3x + 1) = +\infty \)
+        </p>
+
+        <p>
+          \( \lim_{x \to -\infty} (\frac{x}{3} - 1) = -\infty \)
+        </p>
+
+        <p>
+          \( \lim_{x \to +\infty} (3x^2 - 1) = +\infty \)
+        </p>
+
+        <p>
+          \( \lim_{x \to -\infty} (-3x^2 - 1) = -\infty \)
+        </p>
+      </div>
+      <h3>3. La limite est une forme indéterminée</h3>
+      <div>
+        <p>
+          On dit qu'une limite est <b> indéterminée </b> si l'application des propriétés des limites ne permet pas
+          de prévoir sa valeur. Dans ce cas, il faut avoir recours à des manipulations algébriques pour
+          se ramener, si possible, à des cas déterminés. Les différents types d'indéterminations sont :
+        </p>
+        <center><img src="images/tableau1.png" alt="tableau-limite-indéterminée"></center>
+        <p>Voici quelques méthodes permettant de lever une indétermination, généralement symbolisée
+          par des guillemets :</p>
+      </div>
+
+      <div class="gradient-box">
+        Factorisation dans le cas où l'indétermination est du type \( \frac{0}{0} \)
+      </div>
+
+      <div>
+        <p><b>Exemples:</b></p>
+        <ol>
+          <li>
+            <p>\( \lim_{x \to 3} \frac{x^2 - 9}{x - 3} = \frac{(3)^2 - 9}{3 - 3} = "\frac{0}{0}" \)</p>
+
+            <p>\( \lim_{x \to 1} \frac{x^2 + 3x + 2}{x^2 + 4x + 3} = \frac{1 + 3 + 3}{3 + 3} = \frac{1}{6} \)</p>
+          </li>
+          <li>
+            <p>
+              \( \lim_{x \to -1} \frac{x^2 + 3x + 2}{x^2 + 4x + 3} = "\frac{0}{0}" \)
+            </p>
+            <p>
+              Mais aussi \(   \lim_{x \to -1} \frac{x^2 + 3x + 2}{x^2 + 4x + 3} = \lim_{x \to -1}
+              (\frac{\cancel{(x+1)}(x+2)}{\cancel{(x+1)}(x+3)}) \)
+            </p>
+            <p>
+              \( = -\frac{1+2}{-1+3} = \frac{1}{2} \)
+            </p>
+          </li>
+        </ol>
+      </div>
+      <div class="gradient-box1">
+        Limite à gauche et à droite dans le cas où l'indétermination est du type \(\frac{\text{''nombre''}}{0}\)
+      </div>
+      <div>
+        <p><b>Exemples:</b></p>
+        <ol>
+          <li>
+            <p>\( \lim_{x \to 3} \frac{x - 7}{x^2 - 9}=\frac{3-7}{3^2-9}=\frac{-4}{0} \)</p>
+            <p>
+              A gauche : \( \lim_{x \to 3^-} \frac{x-7}{x^2-9} = \frac{3-7}{(3^-)^2-9} = \frac{-4}{0^-} = +\infty \)
+            </p>
+            <p>
+              A droite : \( \lim_{x \to 3^+} \frac{x-7}{x^2-9} = \frac{3-7}{(3^+)^2-9} = \frac{-4}{0^+} = -\infty \)
+            </p>
+            <p>
+              Conclusion: \( \lim_{x \to 3} \frac{x - 7}{x^2 - 9} \notin \mathbb{R} \) et on peut dire que la fonction \( f(x)= \frac{x - 7}{x^2 - 9} \) admet une AV en x=3.
+            </p>
+          </li>
+          <li>
+            <p>\( \lim_{x \to -1} \frac{x^2 - 3x + 2}{x^2 + 4x + 3}=\frac{(-1)^2 - 3(-1) + 2}{(-1)^2 + 4(-1) + 3}=\frac{1+3+2}{1-4+3}=\frac{6}{0} \)</p>
+            <p>A gauche : \( \lim_{x \to -1^-} \frac{x^2 - 3x + 2}{x^2 + 4x + 3} = \lim_{x \to -1^-} \frac{(x - 1)(x - 2)}{(x + 1)(x + 3)} = \frac{(-2)(-3)}{(0^-)(2)} = \frac{6}{0^-} = -\infty \)</p>
+            <p>A droite : \( \lim_{x \to -1^+} \frac{x^2 - 3x + 2}{x^2 + 4x + 3} = \lim_{x \to -1^+} \frac{(-2)(-3)}{(0^+)(2)} = \frac{6}{0^+} = +\infty \)</p>
+            <p>
+              Conclusion: \( \lim_{x \to -1} \frac{x^2 - 3x + 2}{x^2 + 4x + 3} \notin \mathbb{R} \) et \( f(x)= \frac{x^2 - 3x + 2}{x^2 + 4x + 3} \) admet une AV en x=-1.
+            </p>
+          </li>
+        </ol>
+      </div>
+      <div class="gradient-box2">
+        Mise en évidence forcée dans le cas où l'indétermination est du type \( +\infty - \infty \)
+      </div>
+      <div>
+        <p><b>Exemples:</b></p>
+        <ol>
+          <li>
+            <p>\( \lim_{x \to +\infty} (3x^2 - x + 1) = 3 \cdot (+\infty)^2 - \infty + 1 = +\infty - \infty \)</p>
+            <p>
+              Mais aussi \( \lim_{x \to +\infty} (3x^2-x+1) = \lim_{x \to +\infty} x^2 \cdot (3 - \frac{1}{x} + \frac{1}{x^2}) = (+\infty)^2 \cdot (3 - \frac{0}{\infty} + \frac{0}{\infty^2}) = \infty \cdot 3 = +\infty \)
+            </p>
+          </li>
+          <li>
+            <p>\( \lim_{x \to -\infty} (-7x^3 - 2x^2 + 4)= +\infty - \infty \)</p>
+            <p>
+              Mais aussi \( \lim_{x \to -\infty} (-7x^3 - 2x^2 + 4) = \lim_{x \to -\infty} ( x^3 \cdot -7 - \frac{2}{x} + \frac{4}{x^3} ) = (-\infty)^3 \cdot (-7) = +\infty \)
+            </p>
+          </li>
+          <li>
+            <p>\( \lim_{x \to -\infty} \frac{3x^3 + x^2 + 1}{x^2 + 3x} = \frac{-\infty + \infty}{\infty - \infty} \)</p>
+            <p>
+              Mais aussi \( \lim_{x \to -\infty} \frac{3x^3 + x^2 + 1}{x^2 + 3x} = \lim_{x \to -\infty} \frac{x^3 \cdot (3 + \frac{1}{x} + \frac{1}{x^3})}{x^2 \cdot ( \frac{3}{x} + 1 )} = \frac{-\infty \cdot 3}{1} = -\infty \)
+            </p>
+            <p>
+              La fonction \( f(x) = \frac{3x^2 + 1}{x + 3} \) n'admet pas d'AH
+            </p>
+          </li>
+          <li>
+            <p>\( \lim_{x \to +\infty} \frac{2x^4 + x^2 + 1}{x^4 + 1} = \frac{+\infty}{+\infty} \)</p>
+            <p>
+              Mais aussi \( \lim_{x \to +\infty} \frac{2x^4 + x^2 + 1}{x^4 + 1} = \lim_{x \to +\infty} \frac{\cancel{x^4} \cdot (2 + \frac{x^2}{x^4} + \frac{1}{x^4})}{\cancel{x^4} \cdot (1 + \frac{1}{x^4})} = \frac{2}{1} = 2 \)
+            </p>
+            <p>
+              La fonction \( f(x) = \frac{2x^4 + x^2 + 1}{x^4 + 1} \) admet une AH en y = 2
+            </p>
+          </li>
+          <li>
+            <p>\( \lim_{x \to -\infty} \frac{x^2 + 1}{x^3 - 1} = \frac{\infty}{-\infty} \)</p>
+            <p>
+              Mais aussi \( \lim_{x \to -\infty} \frac{x^2 + 1}{x^3 - 1} = \lim_{x \to -\infty} \frac{x^2 \cdot (1 + \frac{1}{x^2})}{x^3 \cdot (1 - \frac{1}{x^3})} = \frac{1}{-\infty} = 0 \)
+            </p>
+            <p>
+              La fonction \( f(x)=\frac{x^2 + 1}{x^3 - 1} \) admet une AH en y = 0
+            </p>
+          </li>
+          <li>
+            <p>\( \lim_{x \to +\infty} (x + \sqrt{x^2 - x}) = \infty + \sqrt{\infty^2 - \infty} = \infty + \sqrt{\infty} = \infty + \infty = \infty \)</p>
+            <p>\( \lim_{x \to +\infty} (x + \sqrt{x^2 (1 - \frac{1}{x})}) = \lim_{x \to +\infty} (x + \sqrt{x^2}) = \lim_{x \to +\infty} (x + x) = \lim_{x \to +\infty} 2x = +\infty \)</p>
+          </li>
+      </div>
+      <h3>
+        <b>Proposition 1</b>
+      </h3>
+      <div class="gradient-box3">
+        Le comportement d'une fonction polynomiale à l'infini est le même que celui du terme de
+        plus haut degré. On obtient ainsi \( \pm \infty \)
+      </div>
+      <div>
+        <p>Exemple : \( \lim_{x \to -\infty} (-x^5 - x + 4) = \lim_{x \to -\infty} (x^5 \cdot (-1 - \frac{1}{x^4} +
+          \frac{4}{x^5})) = \lim_{x \to -\infty} ((- \infty)^5 \cdot (-1 - \frac{1}{x^4} + \frac{4}{x^5}))
+          = (-\infty) \cdot (-1) = +\infty \)</p>
+      </div>
+      <h3><b>Proposition 2</b></h3>
+      <div class="gradient-box4">
+        Le comportement d'une fonction rationnelle à l'infini dépend du degré du numérateur et du
+        dénominateur.
+      </div>
+      <div>
+        <p>On distingue 3 cas:</p>
+        <p>(I) Si le degré du numérateur est supérieur à celui du dénominateur, on obtient \( \pm \infty \)</p>
+        <p>
+          <b>Exemple :</b> \( \lim_{x \to -\infty} \frac{-x^5 - x + 4}{x - 1} = \lim_{x \to -\infty} \frac{x^5 (-1 -
+          \frac{1}{x^4} + \frac{4}{x^5})}{x (1 - \frac{1}{x})} \)
+        </p>
+        <p>\( = (-\infty)^4 \cdot (-1) = -\infty \)</p>
+        <p>
+          <b>Interprétation</b>: la fonction \( f(x) = \frac{-x^5 - x + 4}{x - 1} \) n'admet pas d'asymptote
+          horizontale. Admet-elle une asymptote oblique ?
+        </p>
+      </div>
+      <div>
+        <p>(II) Si le degré du numérateur est égal à celui du dénominateur, on obtient un nombre réel différent de zéro.
+        <p>
+          <b>Exemple :</b> \( \lim_{x \to -\infty} \frac{2x^5 - x + 4}{x^5 - 1} = \lim_{x \to -\infty} \frac{x^5 (2 -
+          \frac{1}{x^4} + \frac{4}{x^5})}{x^5 (1 - \frac{1}{x^5})} = \frac{2 - \frac{1}{(-\infty)^4} +
+          \frac{4}{(-\infty)^5}}{(1 - \frac{1}{(-\infty)^5})} = \frac{2}{1} = 2 \)
+        </p>
+        <p>
+          <b>Interprétation</b>: la fonction \( g(x) = \frac{2x^5 - x + 4}{x^5 - 1} \) admet une asymptote horizontale
+          en y=2.
+        </p>
+      </div>
+      <div>
+        <p>(III) Si le degré du numérateur est inférieur à celui du dénominateur, on obtient 0.</p>
+        <p>
+          <b>Exemple :</b> \( \lim_{x \to -\infty} \frac{2x^5 - x + 4}{x^6 - 1} = \lim_{x \to -\infty} \frac{x^5 (2 -
+          \frac{1}{x^4} + \frac{4}{x^5})}{x^6 (1 - \frac{1}{x^6})} = \frac{2 - \frac{1}{(-\infty)^4} +
+          \frac{4}{(-\infty)^5}}{-\infty \cdot (1 - \frac{1}{(-\infty)^6})} = \frac{2}{-\infty} = 0 \)
+        </p>
+        <p>
+          <b>Interprétation</b>: la fonction \( h(x) = \frac{2x^5 - x + 4}{x^6 - 1} \) admet une asymptote horizontale
+          en y=0.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="exercices.js"></script>
+  <script src="js.js"></script>
+  <script src="button.js"></script>
+
+  <footer>
+    <a href="/" class="navbar__logo">CHAVAMATHS</a>
+
+
+    <p>Chavamaths est une plateforme de mathématiques en ligne qui propose des cours, des exercices et une calculatrice
+      en ligne pour les étudiants de tous les niveaux.</p>
+    <p>Graphiques utilisés dans le site sont issues de <a href="https://www.geogebra.org/calculator">Geogebra</a> et de <a href="https://idealcalculator.com/piecewise-function-calculator-grapher/">Ideal Calculator</a></p>
+    <p>Copyright © 2024 CHAVAMATHS</p>
+
+  </footer>
+</body>
+
+</html>

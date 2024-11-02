@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thèmes de Mathématiques</title>
+
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <link href="./style-theorie.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+        
+</head>
+<body>
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="index.html" class="navbar__logo">CHAVAMATHS</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__links">Accueil</a>
+          </li>
+          <li class="navbar__item">
+            <a href="theorie.html" class="navbar__links">Théorie</a>
+          </li>
+          <li class="navbar__item">
+            <a href="exercices.html" class="navbar__links">Exercices</a>
+          </li>
+          <li class="navbar__btn">
+            <a href="./A_propos_de_nous.html" class="button">A propos de nous</a>
+          </li>
+        </ul>
+      </div>
+    </nav> 
+
+<button onclick="imprimerSection()" class="print-button">Imprimer cette théorie</button>
+
+<div class="main__content">
+  <div class="texte__theorie" id="textetheo">
+    <h1 class="sous-titre">1.3. Fonctions continues</h1>
+
+  <p>Que signifie <b>fonction continue ?</b></p>
+
+  <p>Tout le monde a une idée intuitive de la notion de continuité. On peut l’interpréter par le fait de ne jamais lever le crayon lorsqu’on dessine la courbe (graphique) d’un point à un autre. Essayons de l'exprimer analytiquement.</p>
+
+  <h3>§1.3.1 Introduction</h3>
+
+  <p><b>Définition</b></p>
+
+  <div>
+      <p>Soit une fonction \( f \) définie au voisinage de \(x=a \). On dit que \( f \) <b>est continue au point</b> \( x = a\) si et seulement si :</p>
+      <p style="text-align: center;">\( \lim_{(x \to a)} f(x) = f(a) \) </p>
+    <p>Cela signifie que : </p>
+    <ol>
+        <li style="text-align: center;">\( \lim_{(x \to a)} f(x) \)</li>
+        <li style="text-align: center;">\( f(a) \)</li>
+        <li style="text-align: center;">\( f(a) = L \)</li>
+    </ol>
+    <p><b>Remarques</b></p>
+    <ol>
+      <li>
+        <p>Si l'une des deux limites \( L^- \) ou \( L^+ \) n'existe pas ou est infinie, il s'agit d'une <strong>discontinuité essentielle</strong> ou <strong>discontinuité de deuxième espèce</strong>. Par opposition, les discontinuités où les limites existent mais sont différentes sont regroupées sous le nom de <strong>discontinuité de première espèce</strong>. Il est important de noter que les discontinuités essentielles sont à distinguer des <em>singularités essentielles</em> en analyse complexe.</p>
+      </li>
+      <li>
+        <p>Si une fonction possède une asymptote verticale en \(x = a\), alors \(\lim_{x \to a}\) est infinie.</p>
+      </li>
+      <li>
+        <p>Et réciproquement ?</p>
+        <p>Si \(f\) est continue au point \(x = a\), alors \(f\) possède une A.V. en \(x = a\) &#8594; <b>Faux !</b></p>
+        <p><b><u>Contre-exemple:</u></b></p>
+        <p>Un exemple de fonction discontinue qui n'a pas d'asymptote verticale est :</p>
+
+        <div >
+          $$ f(x) = \begin{cases} 
+              x^2 & \text{si } x < 2 \\
+              x-1 & \text{si } x \geq 2 
+          \end{cases} $$
+        </div>
+
+        <p>Cette fonction est discontinue au point \(x=2\) car la limite de \(f(x)\) lorsque \(x\) tend vers \(2\) par la gauche n'est pas égale à \(f(2)\). Cependant, elle n'a pas d'asymptote verticale, car la fonction ne tend pas vers \(+\infty\) ou \(-\infty\) en approchant \(2\).</p>
+      </li>
+ 
+
+<p>En effet, \(\lim_{x \to 2^-} f(x) = 4\), tandis que \(f(2) = 1\).</p>
+<center><img src="images/ex.png" alt="discontinue-sans-AV"></center>        
+
+<li>
+<p>La notion de continuité est une notion locale. Néanmoins, on dira qu'une fonction \(f\) est continue sur un intervalle \(I = [a; b],\) si \(f\) est continue en chaque point de \(I = [a; b]\).</p>
+</li>
+</ol>
+</div>
+</div>
+  <h3> §1.3.2 Propriétés des fonctions continues</h3>
+  <div class="math-box4">
+    <p><strong>Soit \( f \) et \( g \) deux fonctions réelles continues en \( x = a \). Alors :</strong></p>
+    <ol>
+        <li>\( \lambda \cdot f \) est continue en \( x = a \) pour tout \( \lambda \in \mathbb{R} \)</li>
+        <li>\( f + g \) est continue en \( x = a \)</li>
+        <li>\( f - g \) est continue en \( x = a \)</li>
+        <li>\( f \cdot g \) est continue en \( x = a \)</li>
+        <li>\( \frac{f}{g} \) est continue en \( x = a \), si \( g(a) \neq 0 \)</li>
+        <li>Si \( f \) est continue en \( x = a \) et \( g \) est continue en \( y = f(a) \), alors \( g \circ f \) est continue en \( x = a \).</li>
+    </ol>
+  </div>
+  <div>
+    <p><b>Exemples</b></p>
+    <p>Étudions la continuité des fonctions suivantes : </p>
+    
+    <ol class="lower-alpha">
+      <li>\( h(x) = 3 \cdot \sqrt{x} \) est continue sur \( \mathbb{R}^+ \)</li>
+      <li>\( h(x) = x^3 + \sqrt{x} \) est continue sur \( \mathbb{R}^+ \)</li>
+      <li>\( h(x) = \frac{x^2}{x-1} \) est continue sur \( \mathbb{R} \setminus \{1\} \)</li>
+    </ol>
+    <p>Ainsi, pour le point c) ci-dessus, on peut ajouter avec certitude qu'une fonction rationnelle est continue sur son domaine de définition, c'est-à-dire \( \mathbb{R} \setminus \) {valeurs interdites (zéro(s)) du dénominateur}.</p>
+    <p><b>Remarque</b></p>
+    <p>Les propriétés sur les fonctions continues nous permettent de déterminer si une fonction « compliquée » est continue en un point, en étudiant la                continuité de chacune de ses parties en ce point, comme par exemple pour $$ h(x) = \frac{x^4 - 5x + 2}{\sqrt{x} - 1} $$.</p>
+    <p>\( D_h = \mathbb{R}^+ \setminus \{1\} \), donc \(h\) est continue sur \(\mathbb{R}^+ \setminus \{1\}\).</p>
+    <p><b>Démonstration</b></p>
+    <p>Par hypothèse, \( f \) et \( g \) sont deux fonctions continues en \( x = a \), c'est-à-dire :</p>
+    <p class="equation-center">
+    \[ \lim_{(x \to a)} f(x) = f(a) \quad \text{et} \quad \lim_{(x \to a)} g(x) = g(a) \]
+    </p>
+    <ol>
+      <li class="equation-center">
+          \( \lim_{(x \to a)} (\lambda \cdot f)(x) = \lim_{(x \to a)} (\lambda \cdot f(x)) = \lambda \cdot \lim_{(x \to a)} f(x) = \lambda \cdot f(a) = (\lambda \cdot f)(a) \)
+      </li>
+      <li class="equation-center">
+          \( \lim_{(x \to a)} (f + g)(x) = \lim_{(x \to a)} (f(x) + g(x)) = \lim_{(x \to a)} f(x) + \lim_{(x \to a)} g(x) = f(a) + g(a) = (f + g)(a) \)
+      </li>
+      <li class="equation-center">
+          \( \lim_{(x \to a)} (f - g)(x) = \lim_{(x \to a)} (f(x) - g(x)) = \lim_{(x \to a)} f(x) - \lim_{(x \to a)} g(x) = f(a) - g(a) = (f - g)(a) \)
+      </li>
+      <li class="equation-center">
+          \( \lim_{(x \to a)} (f \cdot g)(x) = \lim_{(x \to a)} (f(x) \cdot g(x)) = \lim_{(x \to a)} f(x) \cdot \lim_{(x \to a)} g(x) = f(a) \cdot g(a) = (f \cdot g)(a) \)
+      </li>
+      <li class="equation-center">
+          \( \lim_{(x \to a)} \left(\frac{f}{g}\right)(x) = \lim_{(x \to a)} \left(\frac{f(x)}{g(x)}\right) = \frac{\lim_{(x \to a)} f(x)}{\lim_{(x \to a)} g(x)} = \frac{f(a)}{g(a)} = \left(\frac{f}{g}\right)(a) \)
+      </li>
+  </ol>
+  </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<script src="exercices.js"></script>
+<script src="js.js"></script>
+</body>
+</html>

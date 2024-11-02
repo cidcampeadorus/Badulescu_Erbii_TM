@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thèmes de Mathématiques</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <link rel="stylesheet" href="style-exercices.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+        
+</head>
+<body>
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="/" class="navbar__logo">CHAVAMATHS</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__links">Accueil</a>
+          </li>
+          <li class="navbar__item">
+            <a href="theorie.html" class="navbar__links">Théorie</a>
+          </li>
+          <li class="navbar__item">
+            <a href="exercices.html" class="navbar__links">Exercices</a>
+          </li>
+          <li class="navbar__btn">  
+            <a href="./A_propos_de_nous.html" class="button">A propos de nous</a>
+          </li>
+        </ul>
+      </div>
+    </nav> 
+<!-- Interface -->
+
+    
+    
+    <section id="Asymptotes">
+        <div class="exo-titre-header">
+            <h2 class="exo-titre-title">Étude des <span class="exo-titre-highlight">Asymptotes</span></h2>
+            <div class="exo-titre-underline"></div>
+        </div>
+        <p class="exo-titre-description">Découvrez les comportements limites des fonctions à travers l'étude des asymptotes</p>
+        <div class="qcm">
+            <div class="flex-container">
+                
+                    <div class="question">
+                        <p>Question 1 :</p>
+                        <p>Quelle est l'asymptote horizontale de la fonction \( f(x) = \frac{2x+3}{x+5} \) ?</p>
+                        <div class="graph">
+                            <img src="./images/graph10.png" alt="(2x+3)/(x+5)">
+                        </div>
+                        <label><input type="radio" name="q1" value="a"> <span>a) \( y = 1 \)</span></label>
+                        <label><input type="radio" name="q1" value="b"> <span>b) \( y = 2 \)</span></label>
+                        <label><input type="radio" name="q1" value="c"> <span>c) \( y = 0 \)</span></label>
+                        <label><input type="radio" name="q1" value="d"> <span>d) Pas d'asymptote horizontale</span></label>
+                        <button type="button" onclick="checkAnswerAsymptotes(1)">Vérifier la réponse</button>
+                        <div id="result_asymptote1" class="result"></div>
+                    </div>
+    
+                    <div class="question">
+                        <p>Question 2 :</p>
+                        <p>Soit \( f(x) = \frac{1}{x-2} \). Quelle est l'asymptote verticale de cette fonction ?</p>
+                        <div class="graph">
+                            <img src="./images/graph11.png" alt="(1)/(x-2)">
+                        </div>
+                        <label><input type="radio" name="q2" value="a"> <span>a) \( x = 0 \)</span></label>
+                        <label><input type="radio" name="q2" value="b"> <span>b) \( x = 2 \)</span></label>
+                        <label><input type="radio" name="q2" value="c"> <span>c) \( x = -2 \)</span></label>
+                        <label><input type="radio" name="q2" value="d"> <span>d) Pas d'asymptote verticale</span></label>
+                        <button type="button" onclick="checkAnswerAsymptotes(2)">Vérifier la réponse</button>
+                        <div id="result_asymptote2" class="result"></div>
+                    </div>
+    
+                    <div class="question">
+                        <p>Question 3 :</p>
+                        <p>Quelle est l'asymptote horizontale de la fonction \( f(x) = \frac{5x^2+3}{2x^2+1} \) ?</p>
+                        <div class="graph">
+                            <img src="./images/graph12.png" alt="(5x^2+3)/(2x^2+1)">
+                        </div>
+                        <label><input type="radio" name="q3" value="a"> <span>a) \( y = 0 \)</span></label>
+                        <label><input type="radio" name="q3" value="b"> <span>b) \( y = 5 \)</span></label>
+                        <label><input type="radio" name="q3" value="c"> <span>c) \( y = \frac{5}{2} \)</span></label>
+                        <label><input type="radio" name="q3" value="d"> <span>d) Pas d'asymptote horizontale</span></label>
+                        <button type="button" onclick="checkAnswerAsymptotes(3)">Vérifier la réponse</button>
+                        <div id="result_asymptote3" class="result"></div>
+                    </div>
+    
+                    <div class="question">
+                        <p>Question 4 :</p>
+                        <p>Soit \( f(x) = e^x \). Existe-t-il une asymptote horizontale lorsque \( x \) tend vers \( -\infty \) ?</p>
+                        <div class="graph">
+                            <img src="./images/graph_exponential.png" alt="e^x">
+                        </div>
+                        <label><input type="radio" name="q4" value="a"> <span>a) Oui, elle est \( y = 0 \)</span></label>
+                        <label><input type="radio" name="q4" value="b"> <span>b) Oui, elle est \( y = 1 \)</span></label>
+                        <label><input type="radio" name="q4" value="c"> <span>c) Non, il n'y a pas d'asymptote horizontale</span></label>
+                        <label><input type="radio" name="q4" value="d"> <span>d) Oui, elle est \( y = +\infty \)</span></label>
+                        <button type="button" onclick="checkAnswerAsymptotes(4)">Vérifier la réponse</button>
+                        <div id="result_asymptote4" class="result"></div>
+                    </div>
+    
+                    <div class="question">
+                        <p>Question 5 :</p>
+                        <p>Soit \( f(x) = \frac{x^2+1}{x-3} \). Quelle est l'asymptote verticale de cette fonction ?</p>
+                        <div class="graph">
+                            <img src="./images/graph13.png" alt="(x^2+1)/(x-3)">
+                        </div>
+                        <label><input type="radio" name="q5" value="a"> <span>a) \( x = -1 \)</span></label>
+                        <label><input type="radio" name="q5" value="b"> <span>b) \( x = 3 \)</span></label>
+                        <label><input type="radio" name="q5" value="c"> <span>c) \( x = 1 \)</span></label>
+                        <label><input type="radio" name="q5" value="d"> <span>d) Pas d'asymptote verticale</span></label>
+                        <button type="button" onclick="checkAnswerAsymptotes(5)">Vérifier la réponse</button>
+                        <div id="result_asymptote5" class="result"></div>
+                    </div>
+    
+                    <div class="question">
+                        <p>Question 6 :</p>
+                        <p>Quelle est l'asymptote oblique de la fonction \( f(x) = \frac{x^2+x+1}{x} \) lorsque \( x \) tend vers \( +\infty \) ?</p>
+                        <div class="graph">
+                            <img src="./images/graph14.png" alt="(x^2+x+1)/(x)">
+                        </div>
+                        <label><input type="radio" name="q6" value="a"> <span>a) \( y = x + 1 \)</span></label>
+                        <label><input type="radio" name="q6" value="b"> <span>b) \( y = x \)</span></label>
+                        <label><input type="radio" name="q6" value="c"> <span>c) \( y = 1 \)</span></label>
+                        <label><input type="radio" name="q6" value="d"> <span>d) Pas d'asymptote oblique</span></label>
+                        <button type="button" onclick="checkAnswerAsymptotes(6)">Vérifier la réponse</button>
+                        <div id="result_asymptote6" class="result"></div>
+                    </div>
+    
+                    <div class="question">
+                        <p>Question 7 :</p>
+                        <p>Soit \( f(x) = \frac{3x^2+1}{x+4} \). Quelle est l'asymptote oblique de cette fonction lorsque \( x \) tend vers \( +\infty \) ?</p>
+                        <div class="graph">
+                            <img src="./images/graph15.png" alt="(3x^2+1)/(x+4)">
+                        </div>
+                        <label><input type="radio" name="q7" value="a"> <span>a) \( y = 3x - 12 \)</span></label>
+                        <label><input type="radio" name="q7" value="b"> <span>b) \( y = 3 \)</span></label>
+                        <label><input type="radio" name="q7" value="c"> <span>c) \( y = 3x + 1 \)</span></label>
+                        <label><input type="radio" name="q7" value="d"> <span>d) Pas d'asymptote oblique</span></label>
+                        <button type="button" onclick="checkAnswerAsymptotes(7)">Vérifier la réponse</button>
+                        <div id="result_asymptote7" class="result"></div>
+                    </div>
+    
+                    <div class="question">
+                        <p>Question 8 :</p>
+                        <p>Soit \( f(x) = \frac{2x^3 + 3x^2 + 1}{x^2 - 4} \). Quelle est l'asymptote verticale ?</p>
+                        <div class="graph">
+                            <img src="./images/graph16.png" alt="(2x^3 + 3x^2 + 1)/(x^2 - 4)">
+                        </div>
+                        <label><input type="radio" name="q8" value="a"> <span>a) \( x = -2 \)</span></label>
+                        <label><input type="radio" name="q8" value="b"> <span>b) \( x = 2 \)</span></label>
+                        <label><input type="radio" name="q8" value="c"> <span>c) \( x = 0 \)</span></label>
+                        <label><input type="radio" name="q8" value="d"> <span>d) Pas d'asymptote verticale</span></label>
+                        <button type="button" onclick="checkAnswerAsymptotes(8)">Vérifier la réponse</button>
+                        <div id="result_asymptote8" class="result"></div>
+                    </div>
+    
+                    <div class="question">
+                        <p>Question 9 :</p>
+                        <p>Quelle est l'asymptote horizontale de la fonction \( f(x) = \frac{4x + 2}{x - 3} \) ?</p>
+                        <div class="graph">
+                            <img src="./images/graph17.png" alt="(4x + 2)/(x - 3)">
+                        </div>
+                        <label><input type="radio" name="q9" value="a"> <span>a) \( y = 4 \)</span></label>
+                        <label><input type="radio" name="q9" value="b"> <span>b) \( y = 0 \)</span></label>
+                        <label><input type="radio" name="q9" value="c"> <span>c) \( y = 1 \)</span></label>
+                        <label><input type="radio" name="q9" value="d"> <span>d) Pas d'asymptote horizontale</span></label>
+                        <button type="button" onclick="checkAnswerAsymptotes(9)">Vérifier la réponse</button>
+                        <div id="result_asymptote9" class="result"></div>
+                    </div>
+    
+                    <div class="question">
+                        <p>Question 10 :</p>
+                        <p>Soit \( f(x) = \frac{2x^2 + 3}{x^2 + 1} \). Quelle est l'asymptote horizontale de cette fonction ?</p>
+                        <div class="graph">
+                            <img src="./images/graph18.png" alt="(2x^2 + 3)/(x^2 + 1)">
+                        </div>
+                        <label><input type="radio" name="q10" value="a"> <span>a) \( y = 2 \)</span></label>
+                        <label><input type="radio" name="q10" value="b"> <span>b) \( y = 0 \)</span></label>
+                        <label><input type="radio" name="q10" value="c"> <span>c) \( y = 3 \)</span></label>
+                        <label><input type="radio" name="q10" value="d"> <span>d) Pas d'asymptote horizontale</span></label>
+                        <button type="button" onclick="checkAnswerAsymptotes(10)">Vérifier la réponse</button>
+                        <div id="result_asymptote10" class="result"></div>
+                    </div>
+                
+            </div>
+
+            <div class="flex-container">
+                <div class="question">
+                    <p><strong>Déterminer l'asymptote horizontale de la fonction :</strong></p>
+                    <p>\( f(x) = \frac{3x^2 + 2x - 1}{x^2 - 4} \)</p>
+                    <p>L'asymptote horizontale est y = <input type="text" id="answer1" placeholder="Votre réponse..."></p>
+                    <button onclick="checkAnswer_asymptote(1)">Vérifier</button>
+                    <button onclick="revealAnswer_a(1)">Révéler la réponse</button>
+                    <p id="feedback1"></p>
+                    <div id="correctAnswer1" style="display:none;">
+                        <p><strong>Explication:</strong> Pour trouver l'asymptote horizontale, on calcule la limite de f(x) quand x tend vers l'infini. Ici, \( \lim_{x \to \infty} \frac{3x^2 + 2x - 1}{x^2 - 4} = 3 \).</p>
+                    </div>
+                </div>
+            
+                <div class="question">
+                    <p><strong>Trouver l'équation de l'asymptote oblique de la fonction :</strong></p>
+                    <p>\( g(x) = \frac{2x^2 + 3x - 1}{x + 2} \)</p>
+                    <p>L'asymptote oblique est de la forme y = ax + b</p>
+                    <p>a = <input type="text" id="answer2a" placeholder="Valeur de a">, 
+                       b = <input type="text" id="answer2b" placeholder="Valeur de b"></p>
+                    <button onclick="checkAnswer_asymptote(2)">Vérifier</button>
+                    <button onclick="revealAnswer_a(2)">Révéler la réponse</button>
+                    <p id="feedback2"></p>
+                    <div id="correctAnswer2" style="display:none;">
+                        <p><strong>Explication:</strong> Pour une asymptote oblique y = ax + b, a est le coefficient de x^2 au numérateur divisé par le coefficient de x au dénominateur. Ici, a = 2. Pour trouver b, on calcule \( \lim_{x \to \infty} (g(x) - 2x) = -1 \).</p>
+                    </div>
+                </div>
+            
+                <div class="question">
+                    <p><strong>Identifier l'asymptote verticale de la fonction :</strong></p>
+                    <p>\( h(x) = \frac{x^2 + 1}{x - 3} \)</p>
+                    <p>L'asymptote verticale est x = <input type="text" id="answer3" placeholder="Votre réponse..."></p>
+                    <button onclick="checkAnswer_asymptote(3)">Vérifier</button>
+                    <button onclick="revealAnswer_a(3)">Révéler la réponse</button>
+                    <p id="feedback3"></p>
+                    <div id="correctAnswer3" style="display:none;">
+                        <p><strong>Explication:</strong> L'asymptote verticale se produit lorsque le dénominateur est égal à zéro. Ici, x - 3 = 0, donc l'asymptote verticale est x = 3.</p>
+                    </div>
+                </div>
+            
+                <div class="question">
+                    <p><strong>Déterminer les asymptotes de la fonction exponentielle :</strong></p>
+                    <p>\( f(x) = e^x \)</p>
+                    <p>Asymptote horizontale : y = <input type="text" id="answer4" placeholder="Votre réponse..."></p>
+                    <button onclick="checkAnswer_asymptote(4)">Vérifier</button>
+                    <button onclick="revealAnswer_a(4)">Révéler la réponse</button>
+                    <p id="feedback4"></p>
+                    <div id="correctAnswer4" style="display:none;">
+                        <p><strong>Explication:</strong> La fonction exponentielle a une asymptote horizontale y = 0 lorsque x tend vers -∞, car \( \lim_{x \to -\infty} e^x = 0 \).</p>
+                    </div>
+                </div>
+            
+                <div class="question">
+                    <p><strong>Identifier les asymptotes de la fonction logarithmique :</strong></p>
+                    <p>\( g(x) = \ln(x) \)</p>
+                    <p>Asymptote verticale : x = <input type="text" id="answer5" placeholder="Votre réponse..."></p>
+                    <button onclick="checkAnswer_asymptote(5)">Vérifier</button>
+                    <button onclick="revealAnswer_a(5)">Révéler la réponse</button>
+                    <p id="feedback5"></p>
+                    <div id="correctAnswer5" style="display:none;">
+                        <p><strong>Explication:</strong> La fonction logarithmique a une asymptote verticale x = 0, car le logarithme n'est pas défini pour les valeurs négatives ou nulles.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <footer>
+        <p>Chavamaths est une plateforme de mathématiques en ligne qui propose des cours, des exercices et des calculatrices
+        en ligne pour les étudiants de tous les niveaux.</p>
+      <p>Graphiques utilisés dans le site sont issues de <a href="https://www.geogebra.org/calculator">Geogebra</a> et de <a href="https://idealcalculator.com/piecewise-function-calculator-grapher/">Ideal Calculator</a></p>
+      <p>Copyright © 2024 CHAVAMATHS</p>
+  
+    </footer>
+    <script src="exercices.js"></script>
+    <script src="js.js"></script>
+</body>
+</html>
+</html>

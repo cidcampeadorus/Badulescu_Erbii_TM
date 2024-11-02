@@ -1,0 +1,296 @@
+/* Base styles */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.main__content {
+  max-width: 1300px; /* Ajusté à 1300px pour correspondre à la largeur de la page */
+  margin: 0 auto;
+  padding: 2.5rem;
+  background-color: #fff;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+/* Typography */
+.sous-titre {
+  font-size: 2.7rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  word-wrap: break-word;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #8B0000;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #8B0000;
+  padding-bottom: 0.5rem;
+  word-wrap: break-word;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  word-wrap: break-word;
+}
+
+
+
+/* Math content */
+.texte__theorie .MathJax {
+  font-size: 1.2rem;
+  max-width: 100%;
+
+}
+
+
+
+/* Sections and content blocks */
+.texte__theorie > div {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.fonction, .definition, .math-box5 {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+
+}
+
+/* Images */
+.texte__theorie img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Lists */
+.texte__theorie ul, .texte__theorie ol {
+  font-size: 1.2rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+    padding-left: 2em; /* Garde l'indentation des listes */
+    margin-bottom: 1em; /* Ajoute un peu d'espace après chaque liste */
+    margin-left: 1.5rem;
+
+}
+
+.texte__theorie li {
+  margin-bottom: 0.5rem;
+
+}
+
+/* Definition lists */
+.texte__theorie dl {
+  margin-bottom: 1rem;
+}
+
+.texte__theorie dt {
+  font-weight: bold;
+  margin-top: 1rem;
+
+}
+
+.texte__theorie dd {
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+
+}
+
+/* Rules in math-box6 */
+.math-box6 {
+  background-color: #f0f8ff;
+  border: 2px solid #4682b4;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.math-box6 h3 {
+  color: #4682b4;
+  margin-top: 0;
+}
+
+.rules-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+}
+
+.rule {
+  flex: 1 1 300px;
+  display: flex;
+  align-items: flex-start;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.rule-number {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-right: 10px;
+  min-width: 20px;
+
+}
+
+.rule-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .rule {
+    flex-basis: 100%;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .main__content {
+    padding: 1.5rem;
+  }
+
+  .sous-titre {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  .texte__theorie .MathJax {
+    font-size: 1.1rem;
+  }
+  
+  /* Ajustez la taille de police des équations sur les petits écrans */
+  .equation-center .MathJax {
+    font-size: 0.9rem;
+  }
+}
+
+p,ul,ol,li {
+  font-size: 1.3rem;
+}
+
+p {
+  margin-bottom: 1rem;
+
+}
+
+
+
+/* Style uniforme pour toutes les gradient boxes */
+.gradient-box,
+.gradient-box1,
+.gradient-box2,
+.gradient-box3,
+.gradient-box4 {
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Responsive design pour les gradient boxes */
+@media (max-width: 768px) {
+  .gradient-box,
+  .gradient-box1,
+  .gradient-box2,
+  .gradient-box3,
+  .gradient-box4 {
+    padding: 15px;
+    font-size: 0.9em;
+  }
+}
+
+/* Style uniforme pour toutes les math boxes */
+.math-box,
+.math-box1,
+.math-box2,
+.math-box3,
+.math-box4,
+.math-box5,
+.math-box6 {
+  background-color: #f0f8ff; /* Couleur de fond légère */
+  border: 2px solid #4682b4; /* Bordure bleue */
+  border-radius: 10px;
+  padding: 30px;
+  margin: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.math-box h3,
+.math-box1 h3,
+.math-box2 h3,
+.math-box3 h3,
+.math-box4 h3,
+.math-box5 h3,
+.math-box6 h3 {
+  margin-top: 0;
+}
+
+/* Responsive design pour les gradient boxes et math boxes */
+@media (max-width: 768px) {
+  .gradient-box,
+  .gradient-box1,
+  .gradient-box2,
+  .gradient-box3,
+  .gradient-box4,
+  .math-box,
+  .math-box1,
+  .math-box2,
+  .math-box3,
+  .math-box4,
+  .math-box5,
+  .math-box6 {
+    padding: 15px;
+    font-size: 0.9em;
+  }
+}
+/* Bouton de téléchargement en PDF */
+.print-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #4682b4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.print-button:hover {
+  background-color: #ff0844;
+  transition: all 0.3s ease;
+}

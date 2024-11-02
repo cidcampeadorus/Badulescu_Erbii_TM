@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thèmes de Mathématiques</title>
+
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <link href="./style-theorie.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+        
+</head>
+<body>
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="index.html" class="navbar__logo">CHAVAMATHS</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__links">Accueil</a>
+          </li>
+          <li class="navbar__item">
+            <a href="theorie.html" class="navbar__links">Théorie</a>
+          </li>
+          <li class="navbar__item">
+            <a href="exercices.html" class="navbar__links">Exercices</a>
+          </li>
+          <li class="navbar__btn">
+            <a href="./A_propos_de_nous.html" class="button">A propos de nous</a>
+          </li>
+        </ul>
+      </div>
+    </nav> 
+<!-- Interface -->
+<button onclick="imprimerSection()" class="print-button">Imprimer cette théorie</button>
+
+
+<div class="main__content">
+  <div class="texte__theorie" id="textetheo">
+    <h1 class="sous-titre">1.2. Asymptotes</h1>
+    <h2>§1.2.1 Asymptotes verticales</h2>
+   <div>
+     <p><b>Définition</b></p>
+       <p>
+         On dit qu'une droite verticale d'équation \(x = a\) est une asymptote verticale (A.V.) de la
+         fonction \(f\) si l'une au moins des conditions suivantes est satisfaite :
+       </p>
+       <p>
+         \[\begin{array}{cccc}
+         \lim_{x \to a^-} f(x) = -\infty & \lim_{x \to a^+} f(x) = +\infty & \lim_{x \to a^-} f(x) = +\infty & \lim_{x \to a^+} f(x) = -\infty \\
+         \text{(1)} & \text{(2)} & \text{(3)} & \text{(4)}
+         \end{array}\]
+         <h2>Illustration</h2>
+         <center><img src="images/graph.png" alt="asymptote-graph"></center>
+         <p><b>Exemple</b></p>
+         <p>Considérons la fonction réelle: \( f(x)=\frac{2}{x+3}.\)</p>
+         <space></space>
+         <p>Etapes:</p>
+         <p>I.  \(D_f = \mathbb{R} \setminus \{-3\}\)</p>
+         <p>II. Intuitivement on pourrait donc
+         penser que cette fonction a une
+         asymptote verticale d’équation : \(x = -3\) </p>
+         <p>III. Vérification : </p>
+         <div class="equation-center">
+         \( \lim_{x \to -3^-} \frac{2}{x+3} = \frac{2}{0^-} = -\infty \)
+         </div>
+         <div class="equation-center">
+         \( \lim_{x \to -3^+} \frac{2}{x+3} = \frac{2}{0^+} = +\infty \)
+         </div>
+         <p>Conclusion : \( \text{f}\) admet une AV en \(x=-3\)</p>
+         <p>Remarques</p
+         </style>
+         <ol class="lower-alpha">
+         <li>
+           <p> « Si \( a \notin D_f \), alors \( f \) possède une asymptote verticale d’équation en \( x = a \). »
+           Cette affirmation est fausse, car il se peut qu'une fonction possède une trou.</p>
+           <p>Par exemple : \[
+           D_f = \mathbb{R} \setminus \{2\}, \quad
+           f(x) = 
+           \begin{cases} 
+             2x & \text{si } x < 2 \\
+             x^2 & \text{si } x > 2 
+           \end{cases}
+           \]</p>
+         </li>
+         <li>
+           <p>Le graphique d'une fonction ne coupe jamais une asymptote verticale. </p>  
+           <p>\[D_f = \mathbb{R} \setminus \{a\}\]</p>
+           <p>Si une fonction admet une  AV en \( x = a \)  alors \( f \) est continue et \( f \in D_f \). Si un graphe coupe l'AV alors cela signifie qu'il existe une image en \( x = a \) ce qui est impossible. </p>
+           
+         </li>
+         
+         </ol>
+   </div>
+ 
+   <div> x
+     <h2>§. 1.2.2 Les asymptotes horizontales</h2>
+     <p><b>Définition : </b></p>
+     <p>On dit qu'une droite horizontale d'équation \( y = b \) est une asymptote horizontale (A.H.) de la fonction \( f \) si l'une au moins des conditions suivantes est satisfaite :</p>
+     <p>
+     \( \lim_{x \to +\infty} f(x) = b \) (1) ou \( \lim_{x \to -\infty} f(x) = b \) (2)
+     </p>
+ </p>
+ <p><b>Illustration</b></p>
+     <center><img src="images/as-h.png" alt="asymptote-h-graph"></center>
+     <p><b>Exemple</b></p>
+     <p>Soit la fonction réelle f définie par  \(f(x) = \frac{4x + 3}{2x + 1}\)</p>
+     <p>Etapes :</p>
+     <p>I.\(D_f =  \mathbb{R} \setminus \{-\frac{1}{2}\}\)</p>
+     <p>II. A.V. : en  \(x = -\frac{1}{2}\) ?</p>
+     <p>
+       \( \lim_{x \to -\frac{1}{2}^-} \frac{4x+3}{2x+1} = \frac{1}{0^-} = -\infty \)
+     </p>
+     <p>
+       \( \lim_{x \to -\frac{1}{2}^+} \frac{4x+3}{2x+1} = \frac{1}{0^+} = +\infty \)
+     </p>
+     <p>III. A.H. : en  \(y = 2\)</p>
+     <p>\( \lim_{x \to \pm\infty} \frac{4x+3}{2x+1} = \lim_{x \to \pm\infty} \frac{x \cdot (4 + \frac{3}{x})}{x \cdot (2 + \frac{1}{x})} = \frac{4}{2} = 2 \)</p>
+     <p>IV. Conclusion </p>
+     <ul>
+       <li>
+         <p>\(f\) admet une AV en \(x=-\frac{1}{2}\)</p>
+       </li>
+       <li>
+         <p>\(f\) admet une AH \(x=2\)</p>
+       </li>  
+     </ul>
+ 
+     <p><b>Remarques</b></p>
+     <p> a) Dans les calculs, on peut encore préciser en cas d'A.H. si \(\lim_{x \to -\infty} f(x) = b^+\) , \(\lim_{x \to -\infty} f(x) = b^-\) </p>
+     <p> \(\lim_{x \to +\infty} f(x) = b^+\) ou \(\lim_{x \to +\infty} f(x) = b^-\). Cela peut aider s'il faut ensuite représenter </p> 
+     <p> graphiquement \(f\). </p> 
+     <p> b) Une fonction peut n'avoir aucune asymptote (comme les fonctions polynomiales), une seule (comme la fonction tangente, la fonction logarithme) ou plusieurs (comme les fonctions rationnelles, ...). </p> 
+     <p> c) Le graphique d'une fonction peut, dans certains cas, couper une asymptote horizontale. </p>
+     
+   </div>
+ 
+   <h2>§. 1.2.3 Les asymptotes obliques</h2>
+   <div>
+     <p>Définition : </p>
+     <div class="math-box3">
+         <div class="equation-o">
+             Une droite \(d(x)=ax+b\) (a est la pente et b est l'ordonnée à l'origine) est appelée <b>asymptote oblique</b> (A.O.) de la fonction f si l'une au moins des conditions suivantes est satisfaite :
+         </div>
+         <div class="equation-container">
+             <div class="equation">1) \( \lim_{x \to +\infty} [f(x)-d(x)] = 0 \)</div>
+             <div class="equation">2) \( \lim_{x \to -\infty} [f(x)-d(x)] = 0 \)</div>
+         </div>
+     </div>
+     <p>Autrement dit, si \(x\) tend vers \(\pm \infty\), alors la différence entre \(f\) et \(d\) tend vers 0. </p>
+     <p><b>Illustrations</b></p>
+     <center><img src="images/as-o.png" alt="asymptote-oblique"></center> 
+     <p><b>Exemple</b></p>
+     <p>Soit la fonction rationnelle \( f(x) = \frac{x^3 + 1}{x^2 + 2} \text{ avec } D_f = \mathbb{R} \)</p>
+     <p>Effectuons la division euclidienne \(A(x)\) par \(B(x)\) :  </p>
+     <p>
+     <p>
+         \[
+         \begin{aligned}
+         &\overbrace{x^3 + 1}^{A(x)} = \underbrace{x^2 + 2}_{B(x)} \cdot \overbrace{\color{red}{X}}^{Q(x)} + \underbrace{\color{green}{-2x + 1}}_{R(x)} \\[10pt]
+         &(1) \Rightarrow x^3 + 1 = (x^2 + 2) \cdot \color{red}{X} + \color{green}{-2x + 1} \\ 
+         &\text{avec } \deg(R(x)) < \deg(B(x)) \\[10pt]
+         &(2) \Rightarrow f(x) = \frac{x^3 + 1}{x^2 + 2} = \color{red}{X} + \frac{\color{green}{-2x + 1}}{x^2 + 2}
+         \end{aligned}
+         \]
+     </p>
+     <p>L'asymptote oblique est donc donnée par la fonction \(Q(x)=x\)</p>
+     <p><b>Vérification : </b></p>
+     <p>
+       \( \lim_{x \to \pm\infty} [f(x) - d(x)] = \lim_{x \to \pm\infty} \left[x + \frac{-2x+1}{x^2+2} - x\right] = \lim_{x \to \pm\infty} \frac{x \cdot (-2 + \frac{1}{x})}{x^2 \cdot (1 + \frac{2}{x^2})} \)
+     </p>
+     <p>
+       \[= \frac{-2}{\pm\infty} = 0\]
+     </p>
+     <p>
+       \[\Rightarrow y = x \text{ est l'AO de } f\]
+     </p>
+     <p><b>Illustration</b></p>
+     <center><img src="images/as-o1.png" alt="asym-o-graph1"></center>
+     <p><b>Remarques</b></p>
+     <p>
+       a) Pour les fonctions rationnelles, il y a existence d'une asymptote oblique si le degré du
+       numérateur = degré du dénominateur + 1.
+     </p>
+     <p>
+       Autrement dit : \( f(x) = \frac{A(x)}{B(x)} \) avec \( A(x) \) et \( B(x) \) des polynômes. Alors
+     </p>
+     <p>
+       \( \deg(A) = \deg(B) + 1 \)
+     </p>
+     <p>
+       b) Si \( a = 0 \) et \( b \neq \pm\infty \) de l'asymptote oblique, alors on a en fait une asymptote horizontale (d'équation y=b)
+     </p>
+     <p>
+       c) Une fonction ne peut pas avoir une A.H. et une A.O. du même «côté».
+     </p>
+     <p>
+       d) Le graphique d'une fonction peut dans certains cas couper une asymptote oblique.
+     </p>
+     <p>
+       e) Pour certaines fonctions (log, exp,...) il existe une A.H. ou A.O. en \(-\infty\) et une autre A.H. ou A.O. en \(+\infty\).
+     </p>
+   </div>
+  </div>
+</div>
+
+
+
+<script src="exercices.js"></script>
+<script src="js.js"></script>
+</body>
+</html>

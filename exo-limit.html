@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thèmes de Mathématiques</title>
+
+    <script>
+        window.MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+          },
+          svg: {
+            fontCache: 'global'
+          }
+        };
+      </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <link rel="stylesheet" href="style-exercices.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+        
+</head>
+<body>
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="index.html" class="navbar__logo">CHAVAMATHS</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__links">Accueil</a>
+          </li>
+          <li class="navbar__item">
+            <a href="theorie.html" class="navbar__links">Théorie</a>
+          </li>
+          <li class="navbar__item">
+            <a href="exercices.html" class="navbar__links">Exercices</a>
+          </li>
+          <li class="navbar__btn">
+            <a href="./A_propos_de_nous.html" class="button">A propos de nous</a>
+          </li>
+        </ul>
+      </div>
+    </nav> 
+<!-- Interface -->
+
+    
+    
+    <section id="limites">
+        <div class="exo-titre-header">
+            <h2 class="exo-titre-title">Limites de <span class="exo-titre-highlight">Fonctions</span></h2>
+            <div class="exo-titre-underline"></div>
+        </div>
+        <p class="exo-titre-description">Explorez les concepts fondamentaux des limites de fonctions</p>
+        <div class="qcm">
+            <div class="flex-container">
+                <div class="question">
+                    <p>Quelle est la limite de la fonction \(f(x) = 3x + 5\) quand \(x\) tend vers \(+\infty\) ?</p>
+                    <div class="graph">
+                        <img src="./images/graph1.png" alt="Graph of f(x) = 3x + 5">
+                    </div>
+                    
+                    <label><input type="radio" name="q1" value="a"> a) \(-\infty\)</label>
+                    <label><input type="radio" name="q1" value="b"> b) 3</label>
+                    <label><input type="radio" name="q1" value="c"> c) \(+\infty\)</label>
+                    <label><input type="radio" name="q1" value="d"> d) 0</label>
+                    <button onclick="checkAnswerLimits(1)">Vérifier la réponse</button>
+                    <div id="result1" class="result"></div>
+                </div>
+
+                <div class="question">
+                    
+                    <p>Soit \(f(x) = \frac{1}{x}\). Quelle est la limite de \(f(x)\) lorsque \(x\) tend vers \(0^+\) ?</p>
+                    <div class="graph">
+                        <img src="./images/graph_ln.png" alt="Graph of f(x) = 1/x">
+                    </div>
+                    <label><input type="radio" name="q2" value="a"> a) \(-\infty\)</label>
+                    <label><input type="radio" name="q2" value="b"> b) \(+\infty\)</label>
+                    <label><input type="radio" name="q2" value="c"> c) 0</label>
+                    <label><input type="radio" name="q2" value="d"> d) 1</label>
+                    <button onclick="checkAnswerLimits(2)">Vérifier la réponse</button>
+                    <div id="result2" class="result"></div>
+                </div>
+
+                <div class="question">
+                    <div class="graph">
+                        <img src="./images/graph2.png" alt="Graph of f(x) = (x^2 - 1)/(x - 1)">
+                    </div>
+                    <p>Soit \(f(x) = \frac{x^2-1}{x-1}\). Quelle est la limite de \(f(x)\) lorsque \(x\) tend vers 1 ?</p>
+                    <label><input type="radio" name="q3" value="a"> a) 0</label>
+                    <label><input type="radio" name="q3" value="b"> b) 2</label>
+                    <label><input type="radio" name="q3" value="c"> c) 1</label>
+                    <label><input type="radio" name="q3" value="d"> d) La limite n'existe pas</label>
+                    <button onclick="checkAnswerLimits(3)">Vérifier la réponse</button>
+                    <div id="result3" class="result"></div>
+                </div>
+
+                <div class="question">
+                    <p>Soit \(f(x) = e^{x}\). Quelle est la limite de \(f(x)\) lorsque \(x\) tend vers \(-\infty\) ?</p>
+                    <div class="graph">
+                        <img src="./images/graph_exponential.png" alt="Graph of e^x">
+                    </div>
+                    <label><input type="radio" name="q4" value="a"> a) 0</label>
+                    <label><input type="radio" name="q4" value="b"> b) \(+\infty\)</label>
+                    <label><input type="radio" name="q4" value="c"> c) 1</label>
+                    <label><input type="radio" name="q4" value="d"> d) \(-\infty\)</label>
+                    <button onclick="checkAnswerLimits(4)">Vérifier la réponse</button>
+                    <div id="result4" class="result"></div>
+                </div>
+
+                <div class="question">
+                    <p>Soit \( f(x) = \ln(x) \). Quelle est la limite de \( f(x) \) lorsque \( x \) tend vers \( 0^+ \) ?</p>
+                    <div class="graph">
+                        <img src="./images/graph_lnx.png" alt="Graph of ln(x)">
+                    </div>
+                    <label><input type="radio" name="q5" value="a"> a) 0</label>
+                    <label><input type="radio" name="q5" value="b"> b) \( +\infty \)</label>
+                    <label><input type="radio" name="q5" value="c"> c) \(-\infty\)</label>
+                    <label><input type="radio" name="q5" value="d"> d) La limite n'existe pas</label>
+                    <button onclick="checkAnswerLimits(5)">Vérifier la réponse</button>
+                    <div id="result5" class="result"></div>
+                </div>
+
+                <div class="question">
+                    <p>Si \( \lim_{x \to +\infty} f(x) = L \) avec \( L \in \mathbb{R} \), comment appelle-t-on cette limite ?</p>
+                    <label><input type="radio" name="q6" value="a"> a) Une limite infinie</label>
+                    <label><input type="radio" name="q6" value="b"> b) Une limite finie</label>
+                    <label><input type="radio" name="q6" value="c"> c) Une limite n'existant pas</label>
+                    <label><input type="radio" name="q6" value="d"> d) Une limite indéfinie</label>
+                    <button onclick="checkAnswerLimits(6)">Vérifier la réponse</button>
+                    <div id="result6" class="result"></div>
+                </div>
+
+                <div class="question">
+                    <p>Soit \( f(x) = \frac{2x^2+3}{x^2-1} \). Quelle est la limite de \( f(x) \) lorsque \( x \) tend vers \(+\infty\) ?</p>
+                    <div class="graph">
+                        <img src="./images/graph7.png" alt="Graph of f(x) = (2x^2+3)/(x^2-1)">
+                    </div>
+                    <label><input type="radio" name="q7" value="a"> a) 2</label>
+                    <label><input type="radio" name="q7" value="b"> b) 3</label>
+                    <label><input type="radio" name="q7" value="c"> c) 1</label>
+                    <label><input type="radio" name="q7" value="d"> d) 0</label>
+                    <button onclick="checkAnswerLimits(7)">Vérifier la réponse</button>
+                    <div id="result7" class="result"></div>
+                </div>
+
+                <div class="question">
+                    <p>Quelle est la limite de la fonction \( f(x) = \sin(x) \) lorsque \( x \) tend vers \(+\infty\) ?</p>
+                    <div class="graph">
+                        <img src="./images/graph_sin.png" alt="Graph of sin(x)">
+                    </div>
+                    <label><input type="radio" name="q8" value="a"> a) \(+\infty\)</label>
+                    <label><input type="radio" name="q8" value="b"> b) 0</label>
+                    <label><input type="radio" name="q8" value="c"> c) La limite n'existe pas</label>
+                    <label><input type="radio" name="q8" value="d"> d) 1</label>
+                    <button onclick="checkAnswerLimits(8)">Vérifier la réponse</button>
+                    <div id="result8" class="result"></div>
+                </div>
+
+                <div class="question">
+                    <p>Quelle est la limite de la fonction \(f(x) = \frac{1}{x}\) quand \(x\) tend vers \(+\infty\) ?</p>
+                    <div class="graph">
+                        <img src="./images/graph_ln.png" alt="Graph of 1/x">
+                    </div>
+                    <label><input type="radio" name="q9" value="a"> a) 0</label>
+                    <label><input type="radio" name="q9" value="b"> b) \(+\infty\)</label>
+                    <label><input type="radio" name="q9" value="c"> c) \(-\infty\)</label>
+                    <label><input type="radio" name="q9" value="d"> d) La limite n'existe pas</label>
+                    <button onclick="checkAnswerLimits(9)">Vérifier la réponse</button>
+                    <div id="result9" class="result"></div>
+                </div>
+
+                <div class="question">
+                    <p>Quelle est la limite de la fonction \(f(x) = x^2\) quand \(x\) tend vers \(+\infty\) ?</p>
+                    <div class="graph">
+                        <img src="./images/graph9.png" alt="Graph of x^2">
+                    </div>
+                    <label><input type="radio" name="q10" value="a"> a) 0</label>
+                    <label><input type="radio" name="q10" value="b"> b) 3</label>
+                    <label><input type="radio" name="q10" value="c"> c) \(+\infty\)</label>
+                    <label><input type="radio" name="q10" value="d"> d) 1</label>
+                    <button onclick="checkAnswerLimits(10)">Vérifier la réponse</button>
+                    <div id="result10" class="result"></div>
+                </div>
+            </div>
+
+
+            <div class="flex-container">
+                <div class="question">
+                    <p><strong>Trouver la limite quand \(x\) tend vers 2 : </strong></p>
+                    <p>\(\lim_{x \to 2} (3x^2 - 2x + 4) =\)
+                        <input type="text" id="answer1" placeholder="Votre réponse...">.</p>
+                    <button onclick="checkAnswer_text_limite(1)">Vérifier</button>
+                    <button onclick="revealAnswer_l(1)">Révéler la réponse</button>
+                    <p id="feedback1"></p>
+                    <div id="correctAnswer1" style="display:none;">
+                        
+                        <p><strong>Explication:</strong> En substituant 2 dans l'expression \(3x^2 - 2x + 4\), le calcul est \(3(2^2) - 2(2) + 4 = 12 - 4 + 4 = 12\).</p>
+                    </div>
+                </div>
+            
+                <div class="question">
+                    <p><strong>Compléter l'équation pour qu'elle reflète la limite de la fonction quand \(x\) tend vers \(+\infty\)</strong></p>
+                    <p>\( \lim_{x \to +\infty} \left(\frac{1}{x}\right) = \) <input type="text" id="answer2" placeholder="Votre réponse...">.</p>
+                    <button onclick="checkAnswer_text_limite(2)">Vérifier</button>
+                    <button onclick="revealAnswer_l(2)">Révéler la réponse</button>
+                    <p id="feedback2"></p>
+                    <div id="correctAnswer2" style="display:none;">
+                        <p><strong>Explication:</strong> En substituant \(x\) dans l'expression \( \lim_{x \to +\infty} \left(\frac{1}{x}\right)  \), le calcul est \(\frac{1}{+\infty}\).</p>
+                    </div>
+                </div>
+            
+                <div class="question">
+                    <p>Déterminer la limite de la fonction exponentielle :</p>
+                    <p>\( \lim_{x \to -\infty} (e^x) = \) <input type="text" id="answer3" placeholder="Votre réponse...">.</p>
+                    <button onclick="checkAnswer_text_limite(3)">Vérifier</button>
+                    <button onclick="revealAnswer_l(3)">Révéler la réponse</button>
+                    <p id="feedback3"></p>
+                    
+                    <div id="correctAnswer3" style="display:none;">
+                        <p><strong>Explication:</strong> En substituant \(x\) dans l'expression \( \lim_{x \to -\infty} (e^x) \), le calcul est \((e^x)\).</p>
+                    </div>
+                </div>
+            
+                <div class="question">
+                    <p>Calculer la limite d'une fonction rationnelle :</p>
+                    <p>\( \lim_{x \to 3} \frac{x^2 - 9}{x - 3} = \) <input type="text" id="answer4" placeholder="Votre réponse...">.</p></p>
+                    
+                    <button onclick="checkAnswer_text_limite(4)">Vérifier</button>
+                    <button onclick="revealAnswer_l(4)">Révéler la réponse</button>
+                    <p id="feedback4"></p>
+                    
+                    <div id="correctAnswer4" style="display:none;">
+                        <p><strong>Explication:</strong><p>En simplifiant l'expression \(\frac{x^2 - 9}{x - 3}\) en \(\frac{(x-3)(x+3)}{x-3}\), et en annulant les termes \(x-3\), nous obtenons \(x+3\). Ainsi, la limite quand \(x\) tend vers 3 est \(3 + 3 = 6\).</p>
+                    </div>      
+
+                </div> 
+
+                <div class="question">
+                    <p>Calculer la limite de cette fonction trigonométrique :</p>
+                    <p>\( \lim_{x \to 0} \frac{\sin(x)}{x} = \) <input type="text" id="answer5" placeholder="Votre réponse...">.</p>
+                    
+                    <button onclick="checkAnswer_text_limite(5)">Vérifier</button>
+                    <button onclick="revealAnswer_l(5)">Révéler la réponse</button>
+                    <p id="feedback5"></p>
+                    
+                    <div id="correctAnswer5" style="display:none;">
+                        <p><strong>Explication:</strong> Cette limite est une limite fondamentale en trigonométrie. Lorsque x tend vers 0, le rapport de sin(x) sur x tend vers 1. Ce résultat est utilisé dans de nombreuses démonstrations en analyse et en calcul différentiel.</p>
+                    </div>      
+                </div> 
+
+                
+
+                
+        </div>
+        
+    </section>
+    <footer>
+        <p>Chavamaths est une plateforme de mathématiques en ligne qui propose des cours, des exercices et des calculatrices
+            en ligne pour les étudiants de tous les niveaux.</p>
+      <p>Graphiques utilisés dans le site sont issues de <a href="https://www.geogebra.org/calculator">Geogebra</a> et de <a href="https://idealcalculator.com/piecewise-function-calculator-grapher/">Ideal Calculator</a></p>
+      <p>Copyright © 2024 CHAVAMATHS</p>
+  
+    </footer>
+    <script src="exercices.js"></script>
+    <script src="js.js"></script>
+</body>
+</html>

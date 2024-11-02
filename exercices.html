@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thèmes de Mathématiques</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    
+    <link rel="stylesheet" href="style-exercices.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="/" class="navbar__logo">CHAVAMATHS</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__links">Accueil</a>
+          </li>
+          <li class="navbar__item">
+            <a href="theorie.html" class="navbar__links">Théorie</a>
+          </li>
+          <li class="navbar__item">
+            <a href="exercices.html" class="navbar__links">Exercices</a>
+          </li>
+          <li class="navbar__btn">
+            <a href="./A_propos_de_nous.html" class="button">A propos de nous</a>
+          </li>
+        </ul>
+      </div>
+    </nav> 
+    <!-- Interface -->
+    <section id="exo">
+      <div class="exo container">
+        <div class="exo-header">
+          <h1 class="section-title">PROGRAMMES&nbsp;<span>EXERCICES</span></h1>
+        </div>
+        <div class="all-exo">
+          <a href="exo-limit.html">
+            <div class="exo-item">  
+              <div class="exo-info">
+                <h1>Limites</h1>
+                <p>Liste d'exercices pour s'entrainer à comprendre comment fonctionne les limites des fonctions.</p>
+              </div>
+              <div class="exo-img">
+                <img src="images/graphlimit.png" />
+              </div>
+            </div>
+          </a>
+          <a href="exo-asymptote.html">
+            <div class="exo-item">
+              <div class="exo-img">
+                <img src="./images/graphasymp.png" />
+              </div>
+              <div class="exo-info">
+                <h1>Asymptotes</h1>
+                <p>
+                  Liste d'exercices pour s'entrainer à comprendre comment fonctionne les asymptotes. 
+                </p>
+              </div>
+            </div>
+          </a>
+          <a href="exo-continue.html">
+            <div class="exo-item">
+              <div class="exo-info">
+                <h1>Continuité</h1>
+                <p>
+                  Liste d'exercices pour s'entrainer à comprendre comment fonctionne la continuité des fonctions. 
+                </p>
+              </div>
+              <div class="exo-img">
+                <img src="images/graphcontinu.png"/>
+              </div>
+            </div>
+          </a>
+          <a href="exo-derivee.html">
+            <div class="exo-item">
+              <div class="exo-img">
+                <img src="images/graphderivee.png" style="max-width: 100%; height: auto;"/>
+              </div>
+              <div class="exo-info">
+                <h1>Dérivation</h1>
+                <p>
+                  Liste d'exercices pour s'entrainer à comprendre comment dériver. 
+                </p>
+              </div>
+            </div>
+          </a>
+          <a href="exo-fonction.html">
+            <div class="exo-item">
+              <div class="exo-info">
+                <h1>Etude de fonction</h1>
+                <p>
+                  Liste d'exercices pour s'entrainer à étudier des fonctions. 
+                </p>
+              </div>
+              <div class="exo-img">
+                <img src="./images/grapheetude.png" style="max-width: 100%; height: auto;"/>
+              </div>
+            </div>
+          </a>
+          
+        </div>
+      </div>
+
+      
+    </section>
+    <footer>
+      <a href="/" class="navbar__logo">CHAVAMATHS</a>
+    
+    
+      <p>Chavamaths est une plateforme de mathématiques en ligne qui propose des cours, des exercices et des calculatrices
+        en ligne pour les étudiants de tous les niveaux.</p>
+      <p>Images générées avec <a href="https://chatgpt.com/">IA</a> </p>
+      <p>Copyright © 2024 CHAVAMATHS</p>
+    
+    </footer>
+    <script src="js.js"></script>
+  </body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thèmes de Mathématiques</title>
+
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <link href="./style-theorie.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+        
+</head>
+<body>
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="index.html" class="navbar__logo">CHAVAMATHS</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__links">Accueil</a>
+          </li>
+          <li class="navbar__item">
+            <a href="theorie.html" class="navbar__links">Théorie</a>
+          </li>
+          <li class="navbar__item">
+            <a href="exercices.html" class="navbar__links">Exercices</a>
+          </li>
+          <li class="navbar__btn">
+            <a href="./A_propos_de_nous.html" class="button">A propos de nous</a>
+          </li>
+        </ul>
+      </div>
+    </nav> 
+<!-- Interface -->
+
+<button onclick="imprimerSection()" class="print-button">Imprimer cette théorie</button>
+
+<div class="main__content">
+  <div class="texte__theorie" id="textetheo">
+    <h1 class="sous-titre">1.4. Calcul différentiel</h1>
+    <div>
+      <p>La notion de dérivée est le coeur du calcul différentiel. Voici l’approche géométrique de la
+      notion de dérivée : On aimerait pouvoir connaître la pente de la droite tangente \(T\) en un point
+      quelconque d’une courbe car elle nous permet de savoir comment se comporte la courbe en
+      ce point (comportement local).</p>
+    </div>
+    
+    <h2>§1.4.1 Introduction (Approche géométrique de la notion de dérivée)</h2>
+    <div>
+      <p>Soit \( f \) une fonction définie au voisinage de \( x_0 \). Prenons le point fixe \( (x_0, f(x_0)) \) sur le graphique de \( f \).</p>
+      <center><img src="images/graph-diff.png" alt="graph-calcul-diff"></center>
+      <div class="definition">
+          <p>L'image montre une courbe représentant une fonction \( f \) et une tangente \( t \) à cette courbe en un point \( x_0 \). Voici les éléments clés illustrés :</p>
+          <ul>
+              <li>\( f(x_0) \) : la valeur de la fonction \( f \) en \( x_0 \).</li>
+              <li>\( f(x_0 + h) \) : la valeur de la fonction \( f \) en \( x_0 + h \).</li>
+              <li>\( h = \Delta x \) : l'intervalle entre \( x_0 \) et \( x_0 + h \).</li>
+              <li>\( \Delta f \) : la différence entre \( f(x_0 + h) \) et \( f(x_0) \).</li>
+              <li>\( df \) : la différence entre la valeur de la tangente \( t \) en \( x_0 + h \) et \( f(x_0) \).</li>
+          </ul>
+          <p><b>Définition</b></p>
+          <p>Soit \( f \) une fonction définie au voisinage de \( x_0 \). Prenons le point fixe \( (x_0, f(x_0)) \) sur le graphique de \( f \). La dérivée de \( f \) en \( x_0 \) est la limite du rapport des différences finies \( \frac{\Delta f}{\Delta x} \) lorsque \( \Delta x \) tend vers zéro. Graphiquement, cela correspond à la pente de la tangente à la courbe de \( f \) en \( x_0 \).</p>
+          
+          <p>L'image illustre comment la dérivée est géométriquement interprétée. La dérivée de \( f \) en \( x_0 \) est la limite du rapport des différences finies \( \frac{\Delta f}{\Delta x} \) lorsque \( \Delta x \) tend vers zéro. Graphiquement, cela correspond à la pente de la tangente à la courbe de \( f \) en \( x_0 \).</p>
+      </div>
+      <div class="math-box5">
+        <p>(i) Si une fonction \( f \) est dérivable en tout point d'un intervalle ouvert \( I = ]c; d[ \), on dit que \( f \) est dérivable sur \( I \).</p>
+        <p>(ii) Si \( f \) est dérivable sur \( I \), \(\text{la fonction dérivée de}\) \(f\) est :</p>
+        <p>\[
+        f' : I \to \mathbb{R}
+        \]</p>
+        <p>\[
+        x \mapsto f'(x)
+        \]</p>
+      </div>
+    </div>
+    <h2>§1.4.2 Règles de dérivation</h2>
+    <div>
+       <p>Le but de ce paragraphe est d’énoncer et de démontrer certaines formules qui permettent d’obtenir plus rapidement la dérivée de nombreuses fonctions            sans passer par un calcul de limite.</p>
+       <div class="example">
+        <h3>a) $(3x^2-5x+7)'$</h3>
+        <div class="solution">
+            <p><strong>Solution :</strong></p>
+            <p>
+                On applique la règle de dérivation pour les polynômes :<br>
+                $$(3x^2-5x+7)' = 6x-5$$
+            </p>
+            <p>
+                <em>Explication :</em><br>
+                - La dérivée de $3x^2$ est $6x$<br>
+                - La dérivée de $-5x$ est $-5$<br>
+                - La dérivée de 7 est 0
+            </p>
+        </div>
+    </div>
+  
+    <div class="example">
+        <h3>b) $\left(\frac{x^2}{2x+1}\right)'$</h3>
+        <div class="solution">
+            <p><strong>Solution :</strong></p>
+            <p>
+                On applique la règle du quotient :<br>
+                $$\left(\frac{x^2}{2x+1}\right)' = \frac{(2x)(2x+1) - x^2(2)}{(2x+1)^2} = \frac{4x^2+2x-2x^2}{(2x+1)^2} = \frac{2x^2+2x}{(2x+1)^2}$$
+            </p>
+            <p>
+                <em>Explication :</em><br>
+                - On utilise la formule : $\left(\frac{u}{v}\right)' = \frac{u'v-uv'}{v^2}$<br>
+                - Où $u = x^2$ et $v = 2x+1$<br>
+                - $u' = 2x$ et $v' = 2$
+            </p>
+        </div>
+    </div>
+  
+    <div class="example">
+        <h3>c) $\left((3x^4-x^2)^7\right)'$</h3>
+        <div class="solution">
+            <p><strong>Solution :</strong></p>
+            <p>
+                On applique la règle de la chaîne :<br>
+                $$\left((3x^4-x^2)^7\right)' = 7(3x^4-x^2)^6 \cdot (12x^3-2x)$$
+            </p>
+            <p>
+                <em>Explication :</em><br>
+                - On utilise la règle de la chaîne : $(f(g(x)))' = f'(g(x)) \cdot g'(x)$<br>
+                - La dérivée de $3x^4$ est $12x^3$<br>
+                - La dérivée de $-x^2$ est $-2x$<br>
+                - On multiplie par 7 car c'est la dérivée de la puissance 7
+            </p>
+        </div>
+    </div>
+  
+    <div class="example">
+        <h3>Remarques</h3>
+        <p>
+            Il est possible d'obtenir ces dérivées avec la définition de la dérivée mais c'est beaucoup plus long et laborieux. Les règles de dérivation nous permettent de calculer plus efficacement.
+        </p>
+    </div>
+  
+  <div class="math-box6">
+    <h2>Règles de dérivation</h2>
+    <p>Soit \( f \) et \( g \) deux fonctions dérivables en \( x = a \), alors :</p>
+    <div class="rules-list">
+      <div class="rule">
+        <span class="rule-number">1.</span>
+        <span class="rule-content">\(\lambda' = 0 \), \( \forall \lambda \in \mathbb{R} \)</span>
+      </div>
+      <div class="rule">
+        <span class="rule-number">2.</span>
+        <span class="rule-content">\( (\lambda \cdot f)'(x) = \lambda \cdot f'(x) \)</span>
+      </div>
+      <div class="rule">
+        <span class="rule-number">3.</span>
+        <span class="rule-content">\( (f + g)'(x) = f'(x) + g'(x) \)</span>
+      </div>
+      <div class="rule">
+        <span class="rule-number">4.</span>
+        <span class="rule-content">\( (f - g)'(x) = f'(x) - g'(x) \)</span>
+      </div>
+      <div class="rule">
+        <span class="rule-number">5.</span>
+        <span class="rule-content">\( (f \cdot g)'(x) = f'(x) \cdot g(x) + f(x) \cdot g'(x) \)</span>
+      </div>
+      <div class="rule">
+        <span class="rule-number">6.</span>
+        <span class="rule-content">\( \left(\frac{1}{f}\right)'(x) = -\frac{f'(x)}{f^2(x)} \)</span>
+      </div>
+      <div class="rule">
+        <span class="rule-number">7.</span>
+        <span class="rule-content">\( \left(\frac{f}{g}\right)'(x) = \frac{f'(x) \cdot g(x) - f(x) \cdot g'(x)}{g^2(x)} \)</span>
+      </div>
+      <div class="rule">
+        <span class="rule-number">8.</span>
+        <span class="rule-content">\( (g \circ f)'(x) = g'(f(x)) \cdot f'(x) \)</span>
+      </div>
+      <div class="rule">
+        <span class="rule-number">9.</span>
+        <span class="rule-content">\( (x^n)' = n \cdot x^{n-1} \), \( \forall n \in \mathbb{Q} \)</span>
+      </div>
+      <div class="rule">
+        <span class="rule-number">10.</span>
+        <span class="rule-content">\( \sin'(x) = \cos(x) \)</span>
+      </div>
+      <div class="rule">
+        <span class="rule-number">11.</span>
+        <span class="rule-content">\( \cos'(x) = -\sin(x) \)</span>
+      </div>
+      <div class="rule">
+        <span class="rule-number">12.</span>
+        <span class="rule-content">\( \tan'(x) = \frac{1}{\cos^2(x)} = 1 + \tan^2(x) \)</span>
+      </div>
+      <div class="rule">
+        <span class="rule-number">13.</span>
+        <span class="rule-content">\( (e^x)' = e^x \)</span>
+      </div>
+      <div class="rule">
+        <span class="rule-number">14.</span>
+        <span class="rule-content">\( \ln'(x) = \frac{1}{x} \)</span>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+
+
+<script src="exercices.js"></script>
+<script src="js.js"></script>
+</body>
+</html>

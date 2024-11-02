@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thèmes de Mathématiques</title>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    
+    <link rel="stylesheet" href="style-exercices.css" />
+    <link href="./style-theorie.css" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="/" class="navbar__logo">CHAVAMATHS</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__links">Accueil</a>
+          </li>
+          <li class="navbar__item">
+            <a href="theorie.html" class="navbar__links">Théorie</a>
+          </li>
+          <li class="navbar__item">
+            <a href="exercices.html" class="navbar__links">Exercices</a>
+          </li>
+          <li class="navbar__btn">
+            <a href="./A_propos_de_nous.html" class="button">A propos de nous</a>
+          </li>
+        </ul>
+      </div>
+    </nav> 
+   <!--  <!-- Interface   on a repris le code de exercices.html pour la théorie  -->
+    <section id="exo">
+        <div class="exo container">
+          <div class="exo-header">
+            <h1 class="section-title">PROGRAMMES&nbsp;<span>THÉORIE</span></h1>
+          </div>          
+          <div class="all-exo">
+            <a href="theorie_limit.html">
+              <div class="exo-item">
+                <div class="exo-info">
+                  <h1>Limites</h1>
+                  <p>Théorie sur les limites des fonctions.</p>
+                </div>
+                <div class="exo-img">
+                  <img src="images/graphlimit.png" style="max-width: 100%; height: auto;" />
+                </div>
+              </div>
+            </a>
+            <a href="theorie_asymptote.html">
+              <div class="exo-item">
+                <div class="exo-img">
+                  <img src="./images/graphasymp.png" style="max-width: 100%; height: auto;" />
+                </div>
+                <div class="exo-info">
+                  <h1>Asymptotes</h1>
+                  <p>
+                    Théorie sur les asymptotes des fonctions. 
+                  </p>
+                </div>
+              </div>
+            </a>
+            <a href="theorie_continue.html">
+              <div class="exo-item">
+                <div class="exo-info">
+                  <h1>Continuité</h1>
+                  <p>
+                    Théorie sur la continuité des fonctions. 
+                  </p>
+                </div>
+                <div class="exo-img">
+                  <img src="images/graphcontinu.png" style="max-width: 100%; height: auto;"/>
+                </div>
+              </div>
+            </a>
+            <a href="theorie_derivee.html">
+              <div class="exo-item">
+                <div class="exo-img">
+                  <img src="images/graphderivee.png" style="max-width: 100%; height: auto;"/>
+                </div>
+                <div class="exo-info">
+                  <h1>Dérivation</h1>
+                  <p>
+                    Théorie sur la dérivation des fonctions. 
+                  </p>
+                </div>
+              </div>
+            </a>
+            
+            
+          </div>
+        </div>
+      </section>
+      <footer>
+        <a href="/" class="navbar__logo">CHAVAMATHS</a>
+      
+      
+        <p>Chavamaths est une plateforme de mathématiques en ligne qui propose des cours, des exercices et des calculatrices
+          en ligne pour les étudiants de tous les niveaux.</p>
+        <p>Images générées avec <a href="https://chatgpt.com/">IA</a> </p>
+        <p>Copyright © 2024 CHAVAMATHS</p>
+      
+      </footer>
+    <script src="js.js"></script>
+  </body>
+</html>

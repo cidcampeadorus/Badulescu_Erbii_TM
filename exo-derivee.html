@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thèmes de Mathématiques</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <link rel="stylesheet" href="style-exercices.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+        
+</head>
+<body>
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="/" class="navbar__logo">CHAVAMATHS</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__links">Accueil</a>
+          </li>
+          <li class="navbar__item">
+            <a href="theorie.html" class="navbar__links">Théorie</a>
+          </li>
+          <li class="navbar__item">
+            <a href="exercices.html" class="navbar__links">Exercices</a>
+          </li>
+          <li class="navbar__btn">
+            <a href="./A_propos_de_nous.html" class="button">A propos de nous</a>
+          </li>
+        </ul>
+      </div>
+    </nav> 
+<!-- Interface -->
+    
+  <section id="derivee">
+    <div class="exo-titre-header">
+        <h2 class="exo-titre-title">Le calcul <span class="exo-titre-highlight">différentiel</span></h2>
+        <div class="exo-titre-underline"></div>
+    </div>
+    <p class="exo-titre-description">Explorez les concepts fondamentaux du calcul différentiel et ses applications</p>
+    
+    <!-- Add this button after the description and before the QCM section -->
+    <div class="calculator-redirect">
+        <a href="exo-calculator.html" class="calculator-link">Aller à la Calculatrice de Dérivées</a>
+    </div>
+
+    <div class="qcm">
+        <div class="flex-container">
+            <div class="question">
+                <p>Question 1 :</p>     
+                <p>Quelle est la dérivée de la fonction \( f(x) = x^3 \) ?</p>
+                <label><input type="radio" name="q1" value="a"> <span>a) \( 3x^2 \)</span></label>
+                <label><input type="radio" name="q1" value="b"> <span>b) \( 3x^3 \)</span></label>
+                <label><input type="radio" name="q1" value="c"> <span>c) \( x^2 \)</span></label>
+                <label><input type="radio" name="q1" value="d"> <span>d) \( 3x \)</span></label>
+                <button onclick="checkAnswerderivee(1)">Vérifier la réponse</button>
+                <div id="result_derivee1" class="result"></div>
+            </div>
+        
+            <div class="question">
+                <p>Question 2 :</p>
+                <p>Soit \( f(x) = e^x \). Quelle est la dérivée de cette fonction ?</p>
+                <label><input type="radio" name="q2" value="a"> <span>a) \( e^{x+1} \)</span></label>
+                <label><input type="radio" name="q2" value="b"> <span>b) \( e^x \)</span></label>
+                <label><input type="radio" name="q2" value="c"> <span>c) \( xe^x \)</span></label>
+                <label><input type="radio" name="q2" value="d"> <span>d) \( e^{x-1} \)</span></label>
+                <button onclick="checkAnswerderivee(2)">Vérifier la réponse</button>
+                <div id="result_derivee2" class="result"></div>
+            </div>
+        
+            <div class="question">
+                <p>Question 3 :</p>
+                <p>Quelle est la dérivée de la fonction \( f(x) = \ln(x) \)?</p>
+                <label><input type="radio" name="q3" value="a"> <span>a) \( \frac{1}{x^2} \)</span></label>
+                <label><input type="radio" name="q3" value="b"> <span>b) \( \ln(x) \)</span></label>
+                <label><input type="radio" name="q3" value="c"> <span>c) \( \frac{1}{x} \)</span></label>
+                <label><input type="radio" name="q3" value="d"> <span>d) \( 1 \)</span></label>
+                <button onclick="checkAnswerderivee(3)">Vérifier la réponse</button>
+                <div id="result_derivee3" class="result"></div>
+            </div>
+        
+            <div class="question">
+                <p>Question 4 :</p>
+                <p>Soit \( f(x) = \sin(x) \). Quelle est la dérivée de \( f(x) \)?</p>
+                <label><input type="radio" name="q4" value="a"> <span>a) \( \cos(x) \)</span></label>
+                <label><input type="radio" name="q4" value="b"> <span>b) \( -\sin(x) \)</span></label>
+                <label><input type="radio" name="q4" value="c"> <span>c) \( \sin(x) \)</span></label>
+                <label><input type="radio" name="q4" value="d"> <span>d) \( -\cos(x) \)</span></label>
+                <button onclick="checkAnswerderivee(4)">Vérifier la réponse</button>
+                <div id="result_derivee4" class="result"></div>
+            </div>
+        
+            <div class="question">
+                <p>Question 5 :</p>
+                <p>La dérivée de la fonction produit de deux fonctions \( u(x) \) et \( v(x) \), c'est-à-dire \( u(x)v(x) \), est donnée par :</p>
+                <label><input type="radio" name="q5" value="a"> <span>a) \( u'(x)v'(x) \)</span></label>
+                <label><input type="radio" name="q5" value="b"> <span>b) \( u(x)v'(x) + u'(x)v(x) \)</span></label>
+                <label><input type="radio" name="q5" value="c"> <span>c) \( u(x)v(x) \)</span></label>
+                <label><input type="radio" name="q5" value="d"> <span>d) \( u'(x)v(x) \)</span></label>
+                <button onclick="checkAnswerderivee(5)">Vérifier la réponse</button>
+                <div id="result_derivee5" class="result"></div>
+            </div>
+        
+            <div class="question">
+                <p>Question 6 :</p>
+                <p>Quelle est la dérivée seconde de la fonction \( f(x) = x^3 \)?</p>
+                <label><input type="radio" name="q6" value="a"> <span>a) \( 3x^2 \)</span></label>
+                <label><input type="radio" name="q6" value="b"> <span>b) \( 6x \)</span></label>
+                <label><input type="radio" name="q6" value="c"> <span>c) \( x^2 \)</span></label>
+                <label><input type="radio" name="q6" value="d"> <span>d) \( 9x^2 \)</span></label>
+                <button onclick="checkAnswerderivee(6)">Vérifier la réponse</button>
+                <div id="result_derivee6" class="result"></div>
+            </div>
+        
+            <div class="question">
+                <p>Question 7 :</p>
+                <p>Soit \( f(x) = \frac{1}{x} \). Quelle est la dérivée de cette fonction ?</p>
+                <label><input type="radio" name="q7" value="a"> <span>a) \( -\frac{1}{x^2} \)</span></label>
+                <label><input type="radio" name="q7" value="b"> <span>b) \( \frac{1}{x^2} \)</span></label>
+                <label><input type="radio" name="q7" value="c"> <span>c) \( \ln(x) \)</span></label>
+                <label><input type="radio" name="q7" value="d"> <span>d) \( -\ln(x) \)</span></label>
+                <button onclick="checkAnswerderivee(7)">Vérifier la réponse</button>
+                <div id="result_derivee7" class="result"></div>
+            </div>
+        
+            <div class="question">
+                <p>Question 8 :</p>
+                <p>Quelle est la dérivée de la fonction \( f(x) = x^2 \cdot e^x \)?</p>
+                <label><input type="radio" name="q8" value="a"> <span>a) \( 2xe^x \)</span></label>
+                <label><input type="radio" name="q8" value="b"> <span>b) \( 2xe^x + x^2e^x \)</span></label>
+                <label><input type="radio" name="q8" value="c"> <span>c) \( x^2e^x \)</span></label>
+                <label><input type="radio" name="q8" value="d"> <span>d) \( e^x(x^2 + 2x) \)</span></label>
+                <button onclick="checkAnswerderivee(8)">Vérifier la réponse</button>
+                <div id="result_derivee8" class="result"></div>
+            </div>
+        
+            <div class="question">
+                <p>Question 9 :</p>
+                <p>Soit \( f(x) = x^3 - 3x + 1 \). En quel point la tangente à la courbe de \( f \) est-elle horizontale ?</p>
+                <label><input type="radio" name="q9" value="a"> <span>a) En \( x = 1 \)</span></label>
+                <label><input type="radio" name="q9" value="b"> <span>b) En \( x = -1 \)</span></label>
+                <label><input type="radio" name="q9" value="c"> <span>c) En \( x = 0 \)</span></label>
+                <label><input type="radio" name="q9" value="d"> <span>d) En \( x = -2 \)</span></label>
+                <button onclick="checkAnswerderivee(9)">Vérifier la réponse</button>
+                <div id="result_derivee9" class="result"></div>
+            </div>
+        
+            <div class="question">
+                <p>Question 10 :</p>
+                <p>Pour trouver les extremums d'une fonction \( f(x) \), quelle condition sur sa dérivée \( f'(x) \) doit être remplie ?</p>
+                <label><input type="radio" name="q10" value="a"> <span>a) \( f'(x) = 0 \)</span></label>
+                <label><input type="radio" name="q10" value="b"> <span>b) \( f'(x) > 0 \)</span></label>
+                <label><input type="radio" name="q10" value="c"> <span>c) \( f'(x) < 0 \)</span></label>
+                <label><input type="radio" name="q10" value="d"> <span>d) \( f''(x) = 0 \)</span></label>
+                <button onclick="checkAnswerderivee(10)">Vérifier la réponse</button>
+                <div id="result_derivee10" class="result"></div>
+            </div>
+            
+            <div class="question">
+                <p>Question 11 :</p>
+                <p>Soit \( f(x) = \frac{3x+2}{x^2+1} \). Quelle est la dérivée de cette fonction (règle du quotient) ?</p>
+                <label><input type="radio" name="q11" value="a"> <span>a) \( \frac{3(x^2+1)-2x(3x+2)}{(x^2+1)^2} \)</span></label>
+                <label><input type="radio" name="q11" value="b"> <span>b) \( \frac{(3x^2+2)(x+1)}{(x^2+1)^2} \)</span></label>
+                <label><input type="radio" name="q11" value="c"> <span>c) \( \frac{(3x+2)(x^2-1)}{(x^2+1)^2} \)</span></label>
+                <label><input type="radio" name="q11" value="d"> <span>d) \( \frac{3x+2}{x^2+1} \)</span></label>
+                <button onclick="checkAnswerderivee(11)">Vérifier la réponse</button>
+                <div id="result_derivee11" class="result"></div>
+            </div>
+            
+            <div class="question">
+                <p>Question 12 :</p>
+                <p>Quelle est la dérivée de la fonction composée \( f(x) = \sin(3x) \)?</p>
+                <label><input type="radio" name="q12" value="a"> <span>a) \( 3\sin(x) \)</span></label>
+                <label><input type="radio" name="q12" value="b"> <span>b) \( 3\cos(3x) \)</span></label>
+                <label><input type="radio" name="q12" value="c"> <span>c) \( \cos(3x) \)</span></label>
+                <label><input type="radio" name="q12" value="d"> <span>d) \( -3\cos(3x) \)</span></label>
+                <button onclick="checkAnswerderivee(12)">Vérifier la réponse</button>
+                <div id="result_derivee12" class="result"></div>
+            </div>
+            
+            <div class="question">
+                <p>Question 13 :</p>
+                <p>Soit \( f(x) = x^4 - 4x^2 + 4 \). Quelle est la dérivée seconde de \( f(x) \)?</p>
+                <label><input type="radio" name="q13" value="a"> <span>a) \( 12x^2 - 8 \)</span></label>
+                <label><input type="radio" name="q13" value="b"> <span>b) \( 12x^2 + 4 \)</span></label>
+                <label><input type="radio" name="q13" value="c"> <span>c) \( 12x^2 - 4 \)</span></label>
+                <label><input type="radio" name="q13" value="d"> <span>d) \( 24x - 8 \)</span></label>
+                <button onclick="checkAnswerderivee(13)">Vérifier la réponse</button>
+                <div id="result_derivee13" class="result"></div>
+            </div>
+            
+            <div class="question">
+                <p>Question 14 :</p>
+                <p>Soit \( f(x) = 2x^3 - 9x^2 + 12x + 1 \). Déterminez les points critiques (où \( f'(x) = 0 \)) de cette fonction.</p>
+                <label><input type="radio" name="q14" value="a"> <span>a) En \( x = 1 \) et \( x = 3 \)</span></label>
+                <label><input type="radio" name="q14" value="b"> <span>b) En \( x = -1 \) et \( x = 3 \)</span></label>
+                <label><input type="radio" name="q14" value="c"> <span>c) En \( x = 1 \) et \( x = 2 \)</span></label>
+                <label><input type="radio" name="q14" value="d"> <span>d) En \( x = 0 \) et \( x = 3 \)</span></label>
+                <button onclick="checkAnswerderivee(14)">Vérifier la réponse</button>
+                <div id="result_derivee14" class="result"></div>
+            </div>
+        </div>        
+
+        <!-- Exercices à trous -->
+        <div class="flex-container">
+            <div class="question">
+                <p>La dérivée de la position donne la <input type="text" id="answer1" placeholder="Votre réponse...">.</p>
+                <button onclick="checkAnswer_derivative(1)">Vérifier</button>
+                <button onclick="revealAnswer_d(1)">Révéler la réponse</button>
+                <p id="feedback1"></p>
+                <div id="correctAnswer1" style="display:none;">
+                    <p><strong>Explication:</strong> La dérivée de la position par rapport au temps donne la vitesse. Cela représente le taux de changement de la position, qui est précisément la définition de la vitesse.</p>
+                </div>
+            </div>
+        
+            <div class="question">
+                <p>La dérivée de la vitesse donne l'<input type="text" id="answer2" placeholder="Votre réponse...">.</p>
+                <button onclick="checkAnswer_derivative(2)">Vérifier</button>
+                <button onclick="revealAnswer_d(2)">Révéler la réponse</button>
+                <p id="feedback2"></p>
+                <div id="correctAnswer2" style="display:none;">
+                    <p><strong>Explication:</strong> La dérivée de la vitesse par rapport au temps donne l'accélération. L'accélération représente le taux de changement de la vitesse, c'est-à-dire comment la vitesse varie dans le temps.</p>
+                </div>
+            </div>
+        
+            
+            </div>    
+
+            <div class="flex-container">
+                <div class="question">
+                    <p><strong>Calculer la dérivée de la fonction suivante :</strong></p>
+                    <p>\( f(x) = 3x^2 - 2x + 5 \)</p>
+                    <p>f'(x) = <input type="text" id="answer3" placeholder="Votre réponse..."></p>
+                    <button onclick="checkAnswer_derivative(3)">Vérifier</button>
+                    <button onclick="revealAnswer_d(3)">Révéler la réponse</button>
+                    <p id="feedback3"></p>
+                    <div id="correctAnswer3" style="display:none;">
+                        <p><strong>Explication:</strong> On dérive terme à terme : \( (3x^2)' = 6x \), \( (-2x)' = -2 \), et la dérivée d'une constante est 0. Donc f'(x) = 6x - 2.</p>
+                    </div>
+                </div>
+            
+                <div class="question">
+                    <p><strong>Trouver la dérivée de la fonction exponentielle :</strong></p>
+                    <p>\( g(x) = e^x \)</p>
+                    <p>g'(x) = <input type="text" id="answer4" placeholder="Votre réponse..."></p>
+                    <button onclick="checkAnswer_derivative(4)">Vérifier</button>
+                    <button onclick="revealAnswer_d(4)">Révéler la réponse</button>
+                    <p id="feedback4"></p>
+                    <div id="correctAnswer4" style="display:none;">
+                        <p><strong>Explication:</strong> La dérivée de e^x est elle-même. Donc g'(x) = e^x.</p>
+                    </div>
+                </div>
+            
+                <div class="question">
+                    <p><strong>Calculer la dérivée de la fonction suivante :</strong></p>
+                    <p>\( h(x) = \ln(x) \)</p>
+                    <p>h'(x) = <input type="text" id="answer5" placeholder="Votre réponse..."></p>
+                    <button onclick="checkAnswer_derivative(5)">Vérifier</button>
+                    <button onclick="revealAnswer_d(5)">Révéler la réponse</button>
+                    <p id="feedback5"></p>
+                    <div id="correctAnswer5" style="display:none;">
+                        <p><strong>Explication:</strong> La dérivée de ln(x) est 1/x.</p>
+                    </div>
+                </div>
+            
+                <div class="question">
+                    <p><strong>Trouver la dérivée de la fonction composée :</strong></p>
+                    <p>\( f(x) = \sin(x^2) \)</p>
+                    <p>f'(x) = <input type="text" id="answer6" placeholder="Votre réponse..."></p>
+                    <button onclick="checkAnswer_derivative(6)">Vérifier</button>
+                    <button onclick="revealAnswer_d(6)">Révéler la réponse</button>
+                    <p id="feedback6"></p>
+                    <div id="correctAnswer6" style="display:none;">
+                        <p><strong>Explication:</strong> On utilise la règle de dérivation des fonctions composées : f'(x) = cos(x^2) * (x^2)' = 2x * cos(x^2).</p>
+                    </div>
+                </div>
+            
+                <div class="question">
+                    <p><strong>Calculer la dérivée du produit suivant :</strong></p>
+                    <p>\( g(x) = x \cdot \cos(x) \)</p>
+                    <p>g'(x) = <input type="text" id="answer7" placeholder="Votre réponse..."></p>
+                    <button onclick="checkAnswer_derivative(7)">Vérifier</button>
+                    <button onclick="revealAnswer_d(7)">Révéler la réponse</button>
+                    <p id="feedback7"></p>
+                    <div id="correctAnswer7" style="display:none;">
+                        <p><strong>Explication:</strong> On utilise la formule de dérivation d'un produit : (uv)' = u'v + uv'. Ici, g'(x) = 1 * cos(x) + x * (-sin(x)) = cos(x) - x*sin(x).</p>
+                    </div>
+                </div>
+            </div>
+      
+        
+    </div>  
+
+</section>  
+<footer>
+    <p>Chavamaths est une plateforme de mathématiques en ligne qui propose des cours, des exercices et des calculatrices
+    en ligne pour les étudiants de tous les niveaux.</p>
+  <p>Graphiques utilisés dans le site sont issues de <a href="https://www.geogebra.org/calculator">Geogebra</a> et de <a href="https://idealcalculator.com/piecewise-function-calculator-grapher/">Ideal Calculator</a></p>
+    <p>Copyright © 2024 CHAVAMATHS</p>
+
+</footer>
+    <script src="exercices.js"></script>
+    <script src="js.js"></script>
+</body>
+</html>

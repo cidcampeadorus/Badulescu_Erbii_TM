@@ -1,0 +1,542 @@
+
+/* Style de la police 
+ */
+h1,
+h2 {
+  color: #2c3e50;
+}
+
+
+p, input[type="text"]{
+    
+    
+  font-size: 1.2rem;
+  margin-top: 5px;
+  font-weight: 300;
+  letter-spacing: .05rem;
+}
+
+
+/* Style des exercices en général 
+ */
+
+.qcm {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f5f5f5;  
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+/* Style du label */
+.qcm label {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 8px 12px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  user-select: none;
+  position: relative;
+  max-height: 60px;
+  min-height: 60px;
+  font-size: 16px;
+  color: #333;
+
+}
+  
+
+
+
+
+/* Effet hover sur le label*/
+.qcm label:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+/* Ajustement pour la réduction de l'écran*/
+@media (max-width: 768px) {
+  .qcm label {
+      padding: 10px 40px 10px 40px; 
+  }
+
+  .qcm input[type="radio"] + label::before {
+      width: 16px;
+      height: 16px;
+  }
+}
+
+
+/* Style des balises regroupant l'exercice
+ */
+.question {
+  margin: 0;
+  padding:0;
+  flex-basis: 100%;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+  
+
+.question p {
+  margin: 0 0 10px;
+}
+
+.question input {
+  margin-right: 10px;
+}
+
+/* Style du bouton et du résultat 
+ */
+ .result {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: #1f6391;
+}
+
+label, input[type="radio"]{
+  cursor: pointer;
+}
+
+input[type="text"]{
+  border: none;
+  border-bottom: 1px solid lightgray;
+  outline: none;
+}
+
+/* Style du containeur de qcm (la partie au milieu en gros )
+ */
+.flex-container {
+ 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 50%;
+  background-color: #fff;
+  height: 100%;
+  border: 1px solid lightgray;
+}
+
+@media (max-width: 768px) {
+  .flex-container {
+      width: 90%;
+  }
+}
+
+
+
+/* Style des graphiques */
+.graph {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.graph img {
+  max-width: 300px;
+  height: auto;
+
+}
+
+/* Interface menu des exercices et menu théorie */ 
+
+#exo .exo{
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+#exo .container{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#exo .exo-header h1{
+  margin-bottom: 50px;
+  
+}
+
+.section-title{
+  font-size: clamp(2.5rem, 4vw, 4rem); /*  Ceci règle un probleme lorsqu'on rétrécie l'image */
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title span{
+  color: crimson;
+}
+
+#exo .all-exo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+#exo .exo-item{
+  height: 400px;
+  margin: 0;
+  width: 100%;
+  border-radius: 0;
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  
+}
+#exo a {
+  color: crimson;
+  text-decoration: none;
+}
+
+.exo-info{
+  padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(to left, #c31432, #240b36);
+    opacity: .75;
+    color: white;
+    width: 100%;
+}
+.exo-info h1{
+  color: white;
+  font-size: 4rem;
+  font-weight: 500;
+}
+.exo-info p{
+  color: white;
+  line-height: 1.5rem;
+  
+
+}
+
+#exo .exo-img {
+  flex-basis: 50%;
+  position: relative;
+  height: 100%;
+  
+  overflow: hidden;
+}
+
+#exo .exo-img img {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+#exo .exo-img:hover img {
+  transform: scale(1.1);
+}
+
+
+/* Lorsque l'ecran est trop petit, changement du rendu des menus 
+ */
+@media screen and (max-width: 600px) {
+  .exo-info h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+
+  .exo-info, #exo .exo-img {
+    width: 100%;
+    min-width: unset;
+  }
+
+  #exo .exo{
+    flex-direction: column;
+    
+    margin: 0 auto;
+    padding: 100px 0;
+  }
+
+
+#exo .all-exo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+  #exo .exo-item{
+    
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 80%;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+  }
+
+  #exo .exo-info{
+    
+    
+    
+    
+    
+    justify-content: center;
+    flex-direction: column;
+    
+    
+    
+  }
+  #exo .exo-img {
+    overflow: hidden;
+    position: relative;
+   
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+/* css Etude de Fonction */ 
+ 
+.exercise {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.exercise button{
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.exercise button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.exercise button:active {
+  transform: translateY(1px);
+}
+
+.exercise h1, .exercise h2 {
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.exercise .answer {
+  display: none;
+  background-color: #F0F4C3;
+    color: #333; /* Texte en gris foncé pour un bon contraste */
+    padding: 10px;
+    border-radius: 4px;
+  padding: 30px;
+  margin-top: 15px; 
+} 
+
+.math {
+  font-style: italic;
+}
+
+ol{
+  padding-left: 20px;
+}
+
+
+
+/*   Titre des pages 
+ */
+ .exo-titre-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.exo-titre-title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.exo-titre-title .exo-titre-highlight {
+  color: #e74c3c;
+}
+
+.exo-titre-underline {
+  height: 4px;
+  width: 70px;
+  background-color: #3498db;
+  margin: 0 auto;
+}
+
+.exo-titre-description {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  text-align: center;
+  max-width: 600px;
+  margin: 1rem auto 2rem;
+}
+
+
+section{
+  margin-top: 50px;
+}
+
+#calculatrice,
+.calculator.question {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#calculatrice {
+    padding: 1rem;
+}
+
+.calculatrice-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 130px);
+}
+
+
+
+.input-container {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+#function-input,
+.calculator button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+#function-input {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.calculator button {
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.calculator button:hover {
+    background-color: #0056b3;
+}
+
+@media screen and (max-width: 480px) {
+    #function-input,
+    .calculator button {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #function-input {
+        max-width: 500px;
+    }
+}
+
+.calculator-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.calculator-link:hover {
+    background-color: #0056b3;
+}
+
+.calculator-redirect {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#result { 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#derivative-result { /* Pour si le résultat devient trop long  */
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.mjx-chtml {
+    max-width: 100%;
+    overflow-x: auto;
+}
