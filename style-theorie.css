@@ -285,3 +285,72 @@ p {
   background-color: #ff0844;
   transition: all 0.3s ease;
 }
+
+/* Version Mobile */
+
+@media (max-width: 768px) {
+    .main__content {
+        padding: 1rem;
+        margin: 0.5rem;
+        width: 95%;
+    }
+
+    .sous-titre {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    p, ul, ol, li {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    .texte__theorie ul,
+    .texte__theorie ol {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-left: 0.5rem;
+        padding-left: 1.5em;
+    }
+
+    .math-box,
+    .math-box1,
+    .math-box2,
+    .math-box3,
+    .math-box4,
+    .math-box5,
+    .math-box6,
+    .gradient-box,
+    .gradient-box1,
+    .gradient-box2,
+    .gradient-box3,
+    .gradient-box4 {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+
+    .texte__theorie img {
+        margin: 1rem auto;
+    }
+
+    .texte__theorie .MathJax {
+        font-size: 1rem !important;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    .equation-center {
+        font-size: 0.9rem;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+}
