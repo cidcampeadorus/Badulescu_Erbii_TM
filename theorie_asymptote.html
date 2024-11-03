@@ -61,11 +61,12 @@
          On dit qu'une droite verticale d'équation \(x = a\) est une asymptote verticale (A.V.) de la
          fonction \(f\) si l'une au moins des conditions suivantes est satisfaite :
        </p>
-       <p>
+       <p class="equation-overflow">
          \[\begin{array}{cccc}
          \lim_{x \to a^-} f(x) = -\infty & \lim_{x \to a^+} f(x) = +\infty & \lim_{x \to a^-} f(x) = +\infty & \lim_{x \to a^+} f(x) = -\infty \\
          \text{(1)} & \text{(2)} & \text{(3)} & \text{(4)}
          \end{array}\]
+         </p>
          <h2>Illustration</h2>
          <center><img src="images/graph.png" alt="asymptote-graph"></center>
          <p><b>Exemple</b></p>
@@ -77,20 +78,19 @@
          penser que cette fonction a une
          asymptote verticale d’équation : \(x = -3\) </p>
          <p>III. Vérification : </p>
-         <div class="equation-center">
+         <div class="equation-overflow">
          \( \lim_{x \to -3^-} \frac{2}{x+3} = \frac{2}{0^-} = -\infty \)
          </div>
-         <div class="equation-center">
+         <div class="equation-overflow">
          \( \lim_{x \to -3^+} \frac{2}{x+3} = \frac{2}{0^+} = +\infty \)
          </div>
          <p>Conclusion : \( \text{f}\) admet une AV en \(x=-3\)</p>
-         <p>Remarques</p
-         </style>
+         <p>Remarques</p>
          <ol class="lower-alpha">
          <li>
            <p> « Si \( a \notin D_f \), alors \( f \) possède une asymptote verticale d’équation en \( x = a \). »
            Cette affirmation est fausse, car il se peut qu'une fonction possède une trou.</p>
-           <p>Par exemple : \[
+           <p class="equation-overflow">Par exemple : \[
            D_f = \mathbb{R} \setminus \{2\}, \quad
            f(x) = 
            \begin{cases} 
@@ -109,11 +109,11 @@
          </ol>
    </div>
  
-   <div> x
+   <div> 
      <h2>§. 1.2.2 Les asymptotes horizontales</h2>
      <p><b>Définition : </b></p>
      <p>On dit qu'une droite horizontale d'équation \( y = b \) est une asymptote horizontale (A.H.) de la fonction \( f \) si l'une au moins des conditions suivantes est satisfaite :</p>
-     <p>
+     <p class="equation-overflow">
      \( \lim_{x \to +\infty} f(x) = b \) (1) ou \( \lim_{x \to -\infty} f(x) = b \) (2)
      </p>
  </p>
@@ -122,16 +122,17 @@
      <p><b>Exemple</b></p>
      <p>Soit la fonction réelle f définie par  \(f(x) = \frac{4x + 3}{2x + 1}\)</p>
      <p>Etapes :</p>
-     <p>I.\(D_f =  \mathbb{R} \setminus \{-\frac{1}{2}\}\)</p>
+     <p class="equation-overflow">I.\(D_f =  \mathbb{R} \setminus \{-\frac{1}{2}\}\)</p>
      <p>II. A.V. : en  \(x = -\frac{1}{2}\) ?</p>
-     <p>
+     <p class="equation-overflow">
        \( \lim_{x \to -\frac{1}{2}^-} \frac{4x+3}{2x+1} = \frac{1}{0^-} = -\infty \)
      </p>
-     <p>
+     <p class="equation-overflow">
        \( \lim_{x \to -\frac{1}{2}^+} \frac{4x+3}{2x+1} = \frac{1}{0^+} = +\infty \)
      </p>
      <p>III. A.H. : en  \(y = 2\)</p>
-     <p>\( \lim_{x \to \pm\infty} \frac{4x+3}{2x+1} = \lim_{x \to \pm\infty} \frac{x \cdot (4 + \frac{3}{x})}{x \cdot (2 + \frac{1}{x})} = \frac{4}{2} = 2 \)</p>
+     <p class="equation-overflow">
+       \( \lim_{x \to \pm\infty} \frac{4x+3}{2x+1} = \lim_{x \to \pm\infty} \frac{x \cdot (4 + \frac{3}{x})}{x \cdot (2 + \frac{1}{x})} = \frac{4}{2} = 2 \)</p>
      <p>IV. Conclusion </p>
      <ul>
        <li>
@@ -182,14 +183,14 @@
      </p>
      <p>L'asymptote oblique est donc donnée par la fonction \(Q(x)=x\)</p>
      <p><b>Vérification : </b></p>
-     <p>
+     <p class="equation-overflow">
        \( \lim_{x \to \pm\infty} [f(x) - d(x)] = \lim_{x \to \pm\infty} \left[x + \frac{-2x+1}{x^2+2} - x\right] = \lim_{x \to \pm\infty} \frac{x \cdot (-2 + \frac{1}{x})}{x^2 \cdot (1 + \frac{2}{x^2})} \)
      </p>
-     <p>
-       \[= \frac{-2}{\pm\infty} = 0\]
+     <p class="equation-overflow">
+       \(= \frac{-2}{\pm\infty} = 0\)
      </p>
-     <p>
-       \[\Rightarrow y = x \text{ est l'AO de } f\]
+     <p class="equation-overflow">
+       \(\Rightarrow y = x \text{ est l'AO de } f\)
      </p>
      <p><b>Illustration</b></p>
      <center><img src="images/as-o1.png" alt="asym-o-graph1"></center>

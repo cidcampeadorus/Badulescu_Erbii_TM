@@ -112,11 +112,11 @@
           (par des valeurs inférieures à \( a \)).</li>
         <li> \( \lim_{x \to a^+} f(x) \) est la limite de \( f(x) \) lorsque \( x \) tend vers \( a \) par la droite
           (par des valeurs supérieures à \( a \)).</li>
-        <li>
+        <li class="equation-overflow">
           \( \lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x) = L \iff \lim_{x \to a} f(x) = L \)
           (la limite existe)
         </li>
-        <li>
+        <li class="equation-overflow">
           \( \lim_{x \to a^-} f(x) \neq \lim_{x \to a^+} f(x) \iff \lim_{x \to a} f(x) \)
           n'existe pas
         </li>
@@ -137,7 +137,7 @@
 
       <h3>1. La limite est un nombre réel</h3>
       <div>
-        <p><b>Exemple : </b>
+        <p class="equation-overflow"><b>Exemple : </b>
           \( \lim_{x \to 3} (3x^2 - 7x - 1) = 3 \cdot 3^2 - 7 \cdot 3 - 1 = 27 - 21 - 1 = 5 \)
         </p>
       </div>
@@ -146,27 +146,27 @@
         <b>Exemples :</b>
       </p>
       <div>
-        <p>
+        <p class="equation-overflow">
           \( \lim_{x \to -\infty} (3x + 1) = 3 \cdot (-\infty) + 1 -> (négligeable) = -\infty \)
         </p>
 
-        <p>
+        <p class="equation-overflow">
           \( \lim_{x \to +\infty} (3x + 1) = +\infty \)
         </p>
 
-        <p>
+        <p class="equation-overflow">
           \( \lim_{x \to -\infty} (-3x + 1) = +\infty \)
         </p>
 
-        <p>
+        <p class="equation-overflow">
           \( \lim_{x \to -\infty} (\frac{x}{3} - 1) = -\infty \)
         </p>
 
-        <p>
+        <p class="equation-overflow">
           \( \lim_{x \to +\infty} (3x^2 - 1) = +\infty \)
         </p>
 
-        <p>
+        <p class="equation-overflow">
           \( \lim_{x \to -\infty} (-3x^2 - 1) = -\infty \)
         </p>
       </div>
@@ -195,10 +195,10 @@
             <p>\( \lim_{x \to 1} \frac{x^2 + 3x + 2}{x^2 + 4x + 3} = \frac{1 + 3 + 3}{3 + 3} = \frac{1}{6} \)</p>
           </li>
           <li>
-            <p>
+            <p class="equation-overflow">
               \( \lim_{x \to -1} \frac{x^2 + 3x + 2}{x^2 + 4x + 3} = "\frac{0}{0}" \)
             </p>
-            <p>
+            <p class="equation-overflow">
               Mais aussi \(   \lim_{x \to -1} \frac{x^2 + 3x + 2}{x^2 + 4x + 3} = \lim_{x \to -1}
               (\frac{\cancel{(x+1)}(x+2)}{\cancel{(x+1)}(x+3)}) \)
             </p>
@@ -215,22 +215,22 @@
         <p><b>Exemples:</b></p>
         <ol>
           <li>
-            <p>\( \lim_{x \to 3} \frac{x - 7}{x^2 - 9}=\frac{3-7}{3^2-9}=\frac{-4}{0} \)</p>
-            <p>
+            <p class="equation-overflow">\(\lim_{x \to 3} \frac{x - 7}{x^2 - 9}=\frac{3-7}{3^2-9}=\frac{-4}{0}\)</p>
+            <p class="equation-overflow">
               A gauche : \( \lim_{x \to 3^-} \frac{x-7}{x^2-9} = \frac{3-7}{(3^-)^2-9} = \frac{-4}{0^-} = +\infty \)
             </p>
-            <p>
+            <p class="equation-overflow">
               A droite : \( \lim_{x \to 3^+} \frac{x-7}{x^2-9} = \frac{3-7}{(3^+)^2-9} = \frac{-4}{0^+} = -\infty \)
             </p>
-            <p>
+            <p class="equation-overflow">
               Conclusion: \( \lim_{x \to 3} \frac{x - 7}{x^2 - 9} \notin \mathbb{R} \) et on peut dire que la fonction \( f(x)= \frac{x - 7}{x^2 - 9} \) admet une AV en x=3.
             </p>
           </li>
           <li>
-            <p>\( \lim_{x \to -1} \frac{x^2 - 3x + 2}{x^2 + 4x + 3}=\frac{(-1)^2 - 3(-1) + 2}{(-1)^2 + 4(-1) + 3}=\frac{1+3+2}{1-4+3}=\frac{6}{0} \)</p>
-            <p>A gauche : \( \lim_{x \to -1^-} \frac{x^2 - 3x + 2}{x^2 + 4x + 3} = \lim_{x \to -1^-} \frac{(x - 1)(x - 2)}{(x + 1)(x + 3)} = \frac{(-2)(-3)}{(0^-)(2)} = \frac{6}{0^-} = -\infty \)</p>
-            <p>A droite : \( \lim_{x \to -1^+} \frac{x^2 - 3x + 2}{x^2 + 4x + 3} = \lim_{x \to -1^+} \frac{(-2)(-3)}{(0^+)(2)} = \frac{6}{0^+} = +\infty \)</p>
-            <p>
+            <p class="equation-overflow">\( \lim_{x \to -1} \frac{x^2 - 3x + 2}{x^2 + 4x + 3}=\frac{(-1)^2 - 3(-1) + 2}{(-1)^2 + 4(-1) + 3}=\frac{1+3+2}{1-4+3}=\frac{6}{0} \)</p>
+            <p class="equation-overflow">A gauche : \( \lim_{x \to -1^-} \frac{x^2 - 3x + 2}{x^2 + 4x + 3} = \lim_{x \to -1^-} \frac{(x - 1)(x - 2)}{(x + 1)(x + 3)} = \frac{(-2)(-3)}{(0^-)(2)} = \frac{6}{0^-} = -\infty \)</p>
+            <p class="equation-overflow">A droite : \( \lim_{x \to -1^+} \frac{x^2 - 3x + 2}{x^2 + 4x + 3} = \lim_{x \to -1^+} \frac{(-2)(-3)}{(0^+)(2)} = \frac{6}{0^+} = +\infty \)</p>
+            <p class="equation-overflow">
               Conclusion: \( \lim_{x \to -1} \frac{x^2 - 3x + 2}{x^2 + 4x + 3} \notin \mathbb{R} \) et \( f(x)= \frac{x^2 - 3x + 2}{x^2 + 4x + 3} \) admet une AV en x=-1.
             </p>
           </li>
@@ -243,29 +243,29 @@
         <p><b>Exemples:</b></p>
         <ol>
           <li>
-            <p>\( \lim_{x \to +\infty} (3x^2 - x + 1) = 3 \cdot (+\infty)^2 - \infty + 1 = +\infty - \infty \)</p>
-            <p>
-              Mais aussi \begin{align*} \lim_{x \to +\infty} (3x^2-x+1) = \lim_{x \to +\infty} x^2 \cdot (3 - \frac{1}{x} + \frac{1}{x^2}) = (+\infty)^2 \cdot (3 - \frac{0}{\infty} + \frac{0}{\infty^2}) = \infty \cdot 3 = +\infty \end{align*}
+            <p class="equation-overflow">\( \lim_{x \to +\infty} (3x^2 - x + 1) = 3 \cdot (+\infty)^2 - \infty + 1 = +\infty - \infty \)</p>
+            <p class="equation-overflow">
+              Mais aussi \( \lim_{x \to +\infty} (3x^2-x+1) = \lim_{x \to +\infty} x^2 \cdot (3 - \frac{1}{x} + \frac{1}{x^2}) = (+\infty)^2 \cdot (3 - \frac{0}{\infty} + \frac{0}{\infty^2}) = \infty \cdot 3 = +\infty \)
             </p>
           </li>
           <li>
-            <p>\( \lim_{x \to -\infty} (-7x^3 - 2x^2 + 4)= +\infty - \infty \)</p>
-            <p>
-              Mais aussi $$ \lim_{x \to -\infty} (-7x^3 - 2x^2 + 4) = \lim_{x \to -\infty} ( x^3 \cdot -7 - \frac{2}{x} + \frac{4}{x^3} ) = (-\infty)^3 \cdot (-7) = +\infty $$
+            <p class="equation-overflow">\( \lim_{x \to -\infty} (-7x^3 - 2x^2 + 4)= +\infty - \infty \)</p>
+            <p class="equation-overflow">
+              Mais aussi \( \lim_{x \to -\infty} (-7x^3 - 2x^2 + 4) = \lim_{x \to -\infty} ( x^3 \cdot -7 - \frac{2}{x} + \frac{4}{x^3} ) = (-\infty)^3 \cdot (-7) = +\infty \)
             </p>
           </li>
           <li>
-            <p>\( \lim_{x \to -\infty} \frac{3x^3 + x^2 + 1}{x^2 + 3x} = \frac{-\infty + \infty}{\infty - \infty} \)</p>
-            <p>
-              Mais aussi $$ \lim_{x \to -\infty} \frac{3x^3 + x^2 + 1}{x^2 + 3x} = \lim_{x \to -\infty} \frac{x^3 \cdot (3 + \frac{1}{x} + \frac{1}{x^3})}{x^2 \cdot ( \frac{3}{x} + 1 )} = \frac{-\infty \cdot 3}{1} = -\infty $$
+            <p class="equation-overflow">\( \lim_{x \to -\infty} \frac{3x^3 + x^2 + 1}{x^2 + 3x} = \frac{-\infty + \infty}{\infty - \infty} \)</p>
+            <p class="equation-overflow">
+              Mais aussi \( \lim_{x \to -\infty} \frac{3x^3 + x^2 + 1}{x^2 + 3x} = \lim_{x \to -\infty} \frac{x^3 \cdot (3 + \frac{1}{x} + \frac{1}{x^3})}{x^2 \cdot ( \frac{3}{x} + 1 )} = \frac{-\infty \cdot 3}{1} = -\infty \)
             </p>
             <p>
               La fonction \( f(x) = \frac{3x^2 + 1}{x + 3} \) n'admet pas d'AH
             </p>
           </li>
           <li>
-            <p>\( \lim_{x \to +\infty} \frac{2x^4 + x^2 + 1}{x^4 + 1} = \frac{+\infty}{+\infty} \)</p>
-            <p>
+            <p class="equation-overflow">\( \lim_{x \to +\infty} \frac{2x^4 + x^2 + 1}{x^4 + 1} = \frac{+\infty}{+\infty} \)</p>
+            <p class="equation-overflow">
               Mais aussi \( \lim_{x \to +\infty} \frac{2x^4 + x^2 + 1}{x^4 + 1} = \lim_{x \to +\infty} \frac{\cancel{x^4} \cdot (2 + \frac{x^2}{x^4} + \frac{1}{x^4})}{\cancel{x^4} \cdot (1 + \frac{1}{x^4})} = \frac{2}{1} = 2 \)
             </p>
             <p>
@@ -273,17 +273,17 @@
             </p>
           </li>
           <li>
-            <p>\( \lim_{x \to -\infty} \frac{x^2 + 1}{x^3 - 1} = \frac{\infty}{-\infty} \)</p>
-            <p>
+            <p class="equation-overflow">\( \lim_{x \to -\infty} \frac{x^2 + 1}{x^3 - 1} = \frac{\infty}{-\infty} \)</p>
+            <p class="equation-overflow">
               Mais aussi \( \lim_{x \to -\infty} \frac{x^2 + 1}{x^3 - 1} = \lim_{x \to -\infty} \frac{x^2 \cdot (1 + \frac{1}{x^2})}{x^3 \cdot (1 - \frac{1}{x^3})} = \frac{1}{-\infty} = 0 \)
             </p>
             <p>
-              La fonction $$ f(x)=\frac{x^2 + 1}{x^3 - 1} $$ admet une AH en y = 0
+              La fonction \( f(x)=\frac{x^2 + 1}{x^3 - 1} \) admet une AH en y = 0
             </p>
           </li>
           <li>
-            <p>$$ \lim_{x \to +\infty} (x + \sqrt{x^2 - x}) = \infty + \sqrt{\infty^2 - \infty} = \infty + \sqrt{\infty} = \infty + \infty = \infty $$</p>
-            <p>$$  \lim_{x \to +\infty} (x + \sqrt{x^2 (1 - \frac{1}{x})}) = \lim_{x \to +\infty} (x + \sqrt{x^2}) = \lim_{x \to +\infty} (x + x) = \lim_{x \to +\infty} 2x = +\infty $$</p>
+            <p class="equation-overflow">\( \lim_{x \to +\infty} (x + \sqrt{x^2 - x}) = \infty + \sqrt{\infty^2 - \infty} = \infty + \sqrt{\infty} = \infty + \infty = \infty \)</p>
+            <p class="equation-overflow">\( \lim_{x \to +\infty} (x + \sqrt{x^2 (1 - \frac{1}{x})}) = \lim_{x \to +\infty} (x + \sqrt{x^2}) = \lim_{x \to +\infty} (x + x) = \lim_{x \to +\infty} 2x = +\infty \)</p>
           </li>
       </div>
       <h3>
@@ -294,9 +294,9 @@
         plus haut degré. On obtient ainsi \( \pm \infty \)
       </div>
       <div>
-        <p>Exemple : $$ \lim_{x \to -\infty} (-x^5 - x + 4) = \lim_{x \to -\infty} (x^5 \cdot (-1 - \frac{1}{x^4} +
+        <p class="equation-overflow">Exemple :  \( \lim_{x \to -\infty} (-x^5 - x + 4) = \lim_{x \to -\infty} (x^5 \cdot (-1 - \frac{1}{x^4} +
           \frac{4}{x^5})) = \lim_{x \to -\infty} ((- \infty)^5 \cdot (-1 - \frac{1}{x^4} + \frac{4}{x^5}))
-          = (-\infty) \cdot (-1) = +\infty $$</p>
+          = (-\infty) \cdot (-1) = +\infty \)</p>
       </div>
       <h3><b>Proposition 2</b></h3>
       <div class="gradient-box4">
@@ -306,19 +306,21 @@
       <div>
         <p>On distingue 3 cas:</p>
         <p>(I) Si le degré du numérateur est supérieur à celui du dénominateur, on obtient \( \pm \infty \)</p>
-        <p>
+        <p class="equation-overflow">
           <b>Exemple :</b> \( \lim_{x \to -\infty} \frac{-x^5 - x + 4}{x - 1} = \lim_{x \to -\infty} \frac{x^5 (-1 -
           \frac{1}{x^4} + \frac{4}{x^5})}{x (1 - \frac{1}{x})} \)
         </p>
-        <p>\( = (-\infty)^4 \cdot (-1) = -\infty \)</p>
+        <p class="equation-overflow">
+          \( = (-\infty)^4 \cdot (-1) = -\infty \)
+        </p>
         <p>
           <b>Interprétation</b>: la fonction \( f(x) = \frac{-x^5 - x + 4}{x - 1} \) n'admet pas d'asymptote
           horizontale. Admet-elle une asymptote oblique ?
         </p>
       </div>
       <div>
-        <p>(II) Si le degré du numérateur est égal à celui du dénominateur, on obtient un nombre réel différent de zéro.
-        <p>
+        <p>(II) Si le degré du numérateur est égal à celui du dénominateur, on obtient un nombre réel différent de zéro.</p>
+        <p class="equation-overflow">
           <b>Exemple :</b> \( \lim_{x \to -\infty} \frac{2x^5 - x + 4}{x^5 - 1} = \lim_{x \to -\infty} \frac{x^5 (2 -
           \frac{1}{x^4} + \frac{4}{x^5})}{x^5 (1 - \frac{1}{x^5})} = \frac{2 - \frac{1}{(-\infty)^4} +
           \frac{4}{(-\infty)^5}}{(1 - \frac{1}{(-\infty)^5})} = \frac{2}{1} = 2 \)
@@ -330,7 +332,7 @@
       </div>
       <div>
         <p>(III) Si le degré du numérateur est inférieur à celui du dénominateur, on obtient 0.</p>
-        <p>
+        <p class="equation-overflow">
           <b>Exemple :</b> \( \lim_{x \to -\infty} \frac{2x^5 - x + 4}{x^6 - 1} = \lim_{x \to -\infty} \frac{x^5 (2 -
           \frac{1}{x^4} + \frac{4}{x^5})}{x^6 (1 - \frac{1}{x^6})} = \frac{2 - \frac{1}{(-\infty)^4} +
           \frac{4}{(-\infty)^5}}{-\infty \cdot (1 - \frac{1}{(-\infty)^6})} = \frac{2}{-\infty} = 0 \)
