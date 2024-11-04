@@ -2,23 +2,21 @@
 
 ## 📚 À propos
 
-ChavaMaths est une plateforme éducative en ligne dédiée à l'apprentissage des mathématiques, créée par deux étudiants du collège d'André-Chavanne. Notre objectif est de rendre les mathématiques plus accessibles et engageantes pour tous les étudiants.
+ChavaMaths est une plateforme éducative en ligne dédiée à l'apprentissage des mathématiques, créée par deux étudiants du collège d'André-Chavanne. Notre objectif est de rendre les mathématiques plus accessibles et engageantes pour les étudiants de 3e. 
 
 ## 🌟 Fonctionnalités
 
 ### Théorie
 - Cours détaillés sur les concepts mathématiques fondamentaux
 - Sections sur les limites, la continuité et la dérivation
-- Possibilité d'imprimer les cours pour une étude hors-ligne
+- Possibilité d'imprimer les cours pour une étude hors-ligne (à améliorer)
 
 ### Exercices
 - Exercices interactifs avec correction immédiate
 - QCM et exercices à trous
-- Progression graduelle dans la difficulté
 
 ### Outils
 - Calculatrice de dérivées intégrée
-- Visualisation des formules mathématiques avec MathJax
 - Interface responsive pour tous les appareils
 
 ## 🛠 Technologies Utilisées
@@ -33,7 +31,7 @@ ChavaMaths est une plateforme éducative en ligne dédiée à l'apprentissage de
 
 Le site est entièrement responsive et fonctionne sur :
 - Ordinateurs de bureau
-- Tablettes
+- Tablettes (à améliorer)
 - Smartphones
 
 
@@ -46,6 +44,8 @@ Le site est entièrement responsive et fonctionne sur :
 
 - Mme Caroline Guillaume pour la partie théorique
 - M. Mettral pour le suivi du projet
+- Beniamin Badulescu
+- 
 
 ## 📄 Licence
 
