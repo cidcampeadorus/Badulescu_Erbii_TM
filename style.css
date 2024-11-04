@@ -9,6 +9,8 @@
   line-height: 1.6;
 }
 
+
+
 /* Navbar Styles */
 .navbar {
   background: #131313;
@@ -200,6 +202,10 @@ footer {
   padding: 1rem;
   background-color: #131313;
   color: #fff;
+  margin-top: auto;
+  width: 100%;
+  position: relative;
+  
 }
 footer p {
   font-size: 1.2rem;
@@ -222,3 +228,4 @@ footer .navbar__logo {
   align-items: center;
   justify-content: center;
 }
+
