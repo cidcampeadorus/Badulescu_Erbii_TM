@@ -320,67 +320,7 @@
                         <p>La fonction admet un <strong>maximum local</strong> en \( x = \frac{1 + \sqrt{5}}{2} \) et un <strong>minimum local</strong> en \( x = \frac{1 - \sqrt{5}}{2} \). Elle est <strong>décroissante</strong> sur <span class="math">\( ]-\infty, \frac{1 - \sqrt{5}}{2}[ \)</span>, <strong>croissante</strong> sur <span class="math">\( ]\frac{1 - \sqrt{5}}{2}, \frac{1 + \sqrt{5}}{2}[ \)</span>, et <strong>décroissante</strong> sur <span class="math">\( ]\frac{1 + \sqrt{5}}{2}, +\infty[ \)</span>.</p>
                     </div>
                 </div>
-                 <!-- Nouvelle étude 10 -->
-                 <div class="exercise">
-                    <h2>Exercice 10 : Fonction rationnelle <span class="math">\( f(x) = \frac{(x^3-x)(x+1)}{(x^2-4x+4)} \)</span></h2>
-                    <ol>
-                        <li><p>Trouver le domaine de définition.</p></li>
-                        <li><p>Identifier les asymptotes et les trous éventuels.</p></li>
-                        <li><p>Déterminer la dérivée de la fonction.</p></li>
-                        <li><p>Trouver les zéros de la fonction.</p></li>
-                        <li><p>Donner le tableau de variation</p></li>
-                    </ol>
-                    <button onclick="toggleAnswer('answer10')">Afficher/Masquer la réponse</button>
-                    <div id="answer10" class="answer">
-                        <p><strong>Fonction \( f(x) = \frac{(x^3-x)(x+1)}{(x^2-4x+4)} = \frac{x(x^2-1)(x+1)}{(x-2)^2} \)</strong></p>
-                        
-                        <p><strong>1. Domaine :</strong></p>
-                        <p>Le dénominateur s'annule pour <span class="math">\( x = 2 \)</span> (racine double), donc le domaine est <span class="math">\( D_f = \mathbb{R} \setminus \{2\} \)</span>.</p>
-                        
-                        <p><strong>2. Asymptotes et trous :</strong></p>
-                        <ul>
-                            <li>Asymptote verticale : <span class="math">\( x = 2 \)</span></li>
-                            <li>Il n'y a pas de trou dans cette fonction.</li>
-                        </ul>
-                        
-                        <p><strong>3. Dérivée :</strong></p>
-                        <p>En utilisant la règle du quotient :</p>
-                        <p><span class="math">\( f'(x) = \frac{2x^4-7x^3-6x^2+5x+2}{(x-2)^3}\)</span></p>
-                        
-                        <p><strong>4. Zéros de la fonction :</strong></p>
-                        <p>La fonction s'annule pour :
-                        <ul>
-                            <li><span class="math">\( x = -1 \)</span> (facteur (x+1))</li>
-                            <li><span class="math">\( x = 0 \)</span> (facteur x)</li>
-                            <li><span class="math">\( x = 1 \)</span> (facteur (x²-1))</li>
-                        </ul>
-                        </p>
-                        
-                        <p><strong>5. Tableau de variation :</strong></p>
-                        <p>Après étude du signe de la dérivée, la fonction est :</p>
-                        <ul>
-                            <li>Croissante sur <span class="math">\( ]-\infty, -1[ \)</span></li>
-                            <li>Décroissante sur <span class="math">\( ]-1, 0[ \)</span></li>
-                            <li>Croissante sur <span class="math">\( ]0, 1[ \)</span></li>
-                            <li>Décroissante sur <span class="math">\( ]1, 2[ \)</span></li>
-                            <li>Tendant vers <span class="math">\( -\infty \)</span> quand <span class="math">\( x \to 2^- \)</span></li>
-                            <li>Tendant vers <span class="math">\( +\infty \)</span> quand <span class="math">\( x \to 2^+ \)</span></li>
-                            <li>Décroissante sur <span class="math">\( ]2, +\infty[ \)</span></li>
-                        </ul>
                 
-                        <p><strong>Points particuliers :</strong></p>
-                        <p>Les extrema locaux se trouvent en résolvant f'(x) = 0 :</p>
-                        <ul>
-                            <li>Maximum local en x ≈ -1.732</li>
-                            <li>Minimum local en x ≈ -0.577</li>
-                            <li>Maximum local en x ≈ 0.577</li>
-                            <li>Minimum local en x ≈ 4.07</li>
-                            <li>Maximum local en x ≈ 2.577</li>
-                        </ul>
-                
-                        <p><strong>Remarque :</strong> Les points d'inflexion peuvent être déterminés en étudiant la dérivée seconde f''(x), ce qui n'est pas demandé dans l'exercice initial.</p>
-                    </div>
-                </div>
 
                 
 
@@ -401,10 +341,9 @@
         
     </section>
     <footer>
-    <p>Chavamaths est une plateforme de mathématiques en ligne qui propose des cours, des exercices et un calculateur de dérivée
-        en ligne pour les étudiants de tous les niveaux.</p>
-      <p>Les graphiques utilisés dans le site sont issus de <a href="https://www.geogebra.org/calculator">Geogebra</a> et de <a href="https://idealcalculator.com/piecewise-function-calculator-grapher/">Ideal Calculator</a></p>
-      <p>Copyright © 2024 CHAVAMATHS</p>
+    <p>Chavamaths est une plateforme de mathématiques en ligne qui propose des cours et des exercices en ligne pour les étudiants.</p>
+    <p>Les graphiques utilisés dans le site sont issus de <a href="https://www.geogebra.org/calculator">Geogebra</a> et de <a href="https://idealcalculator.com/piecewise-function-calculator-grapher/">Ideal Calculator</a></p>
+    <p>Copyright © 2024 CHAVAMATHS</p>
   
     </footer>
     <script src="exercices.js"></script>

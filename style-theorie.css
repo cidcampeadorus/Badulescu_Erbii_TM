@@ -47,7 +47,6 @@ h3 {
   max-width: 100%;
 }
 
-
 .texte__theorie > div {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
@@ -91,7 +90,6 @@ h3 {
   margin-bottom: 0.5rem;
 }
 
-
 .texte__theorie dl {
   margin-bottom: 1rem;
 }
@@ -105,7 +103,6 @@ h3 {
   margin-left: 1.5rem;
   margin-bottom: 0.5rem;
 }
-
 
 .math-box6 {
   background-color: #f0f8ff;
@@ -233,8 +230,8 @@ p {
 .math-box4,
 .math-box5,
 .math-box6 {
-  background-color: #f0f8ff; 
-  border: 2px solid #4682b4; 
+  background-color: #f0f8ff;
+  border: 2px solid #4682b4;
   border-radius: 10px;
   padding: 30px;
   margin: 20px 0;
@@ -290,68 +287,72 @@ p {
 /* Version Mobile */
 
 @media (max-width: 768px) {
-    .main__content {
-        padding: 1rem;
-        margin: 0.5rem;
-        width: 95%;
-    }
+  .main__content {
+    padding: 1rem;
+    margin: 0.5rem;
+    width: 95%;
+  }
 
-    .sous-titre {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-    }
+  .sous-titre {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
 
-    h2 {
-        font-size: 1.5rem;
-        margin-top: 1.5rem;
-    }
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
 
-    h3 {
-        font-size: 1.3rem;
-    }
+  h3 {
+    font-size: 1.3rem;
+  }
 
-    p, ul, ol, li {
-        font-size: 1.1rem;
-        line-height: 1.8;
-    }
+  p,
+  ul,
+  ol,
+  li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
 
-    .texte__theorie ul,
-    .texte__theorie ol {
-        font-size: 1.1rem;
-        line-height: 1.8;
-        margin-left: 0.5rem;
-        padding-left: 1.5em;
-    }
+  .texte__theorie ul,
+  .texte__theorie ol {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-left: 0.5rem;
+    padding-left: 1.5em;
+  }
 
-    .math-box,
-    .math-box1,
-    .math-box2,
-    .math-box3,
-    .math-box4,
-    .math-box5,
-    .math-box6,
-    .gradient-box,
-    .gradient-box1,
-    .gradient-box2,
-    .gradient-box3,
-    .gradient-box4 {
-        padding: 1rem;
-        margin: 1rem 0;
-    }
+  .math-box,
+  .math-box1,
+  .math-box2,
+  .math-box3,
+  .math-box4,
+  .math-box5,
+  .math-box6,
+  .gradient-box,
+  .gradient-box1,
+  .gradient-box2,
+  .gradient-box3,
+  .gradient-box4 {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
 
-    .texte__theorie img {
-        margin: 1rem auto;
-    }
+  .texte__theorie img {
+    margin: 1rem auto;
+  }
 
-    .texte__theorie .MathJax {
-        font-size: 1rem !important;
-        max-width: 100%;
-        overflow-x: auto;
-    }
-/* Permet de mettre l'overflow quand l'expression dépasse la page
- */    .equation-overflow {
-        font-size: 0.9rem;
-        max-width: 100%;
-        overflow-x: auto;
-    }
+  .texte__theorie .MathJax {
+    font-size: 1rem !important;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  /* Permet de mettre l'overflow quand l'expression dépasse la page
+ */
+  .equation-overflow {
+    font-size: 0.9rem;
+    max-width: 100%;
+    overflow-x: auto;
+  }
 }

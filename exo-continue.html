@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thèmes de Mathématiques</title>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
-    <link rel="stylesheet" href="style-exercices.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-        
-</head>
-<body>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <link rel="stylesheet" href="style-exercices.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <nav class="navbar">
       <div class="navbar__container">
         <a href="/" class="navbar__logo">CHAVAMATHS</a>
@@ -31,239 +37,482 @@
             <a href="exercices.html" class="navbar__links">Exercices</a>
           </li>
           <li class="navbar__btn">
-            <a href="./A_propos_de_nous.html" class="button">A propos de nous</a>
+            <a href="./A_propos_de_nous.html" class="button"
+              >A propos de nous</a
+            >
           </li>
         </ul>
       </div>
-    </nav> 
-<!-- Interface -->
+    </nav>
+    <!-- Interface -->
 
-  
-
-<section id="continuites">
-    <div class="exo-titre-header">
-        <h2 class="exo-titre-title">Étude de la <span class="exo-titre-highlight">Continuité</span></h2>
+    <section id="continuites">
+      <div class="exo-titre-header">
+        <h2 class="exo-titre-title">
+          Étude de la <span class="exo-titre-highlight">Continuité</span>
+        </h2>
         <div class="exo-titre-underline"></div>
-    </div>
-    <p class="exo-titre-description">Explorez les concepts de continuité des fonctions et leurs applications</p>
-    
-    <div class="qcm">
+      </div>
+      <p class="exo-titre-description">
+        Explorez les concepts de continuité des fonctions et leurs applications
+      </p>
+
+      <div class="qcm">
         <div class="flex-container">
-            <div class="question">
-                <p>Question 1 :</p>
-                <p>Soit la fonction \(f(x) = 3x + 2\). Cette fonction est-elle continue sur \(\mathbb{R}\) ?</p>
-                <label><input type="radio" name="q1" value="a"> a) Oui, elle est continue sur \(\:\) \(\mathbb{R}\)</label>
-                <label><input type="radio" name="q1" value="b"> b) Non, elle n'est pas continue</label>
-                <label><input type="radio" name="q1" value="c"> c) Oui, mais seulement sur \(\:\) \([0, +\infty[\)</label>
-                <label><input type="radio" name="q1" value="d"> d) Non, elle est continue seulement en \(\:\) \(x = 0\)</label>
-                <button onclick="checkAnswercontinue(1)">Vérifier la réponse</button>
-                <div id="result_continue1" class="result"></div>
+          <div class="question">
+            <p>Question 1 :</p>
+            <p>
+              Soit la fonction \(f(x) = 3x + 2\). Cette fonction est-elle
+              continue sur \(\mathbb{R}\) ?
+            </p>
+            <label
+              ><input type="radio" name="q1" value="a" /> a) Oui, elle est
+              continue sur \(\:\) \(\mathbb{R}\)</label
+            >
+            <label
+              ><input type="radio" name="q1" value="b" /> b) Non, elle n'est pas
+              continue</label
+            >
+            <label
+              ><input type="radio" name="q1" value="c" /> c) Oui, mais seulement
+              sur \(\:\) \([0, +\infty[\)</label
+            >
+            <label
+              ><input type="radio" name="q1" value="d" /> d) Non, elle est
+              continue seulement en \(\:\) \(x = 0\)</label
+            >
+            <button onclick="checkAnswercontinue(1)">
+              Vérifier la réponse
+            </button>
+            <div id="result_continue1" class="result"></div>
+          </div>
+
+          <div class="question">
+            <p>Question 2 :</p>
+            <p>
+              Soit la fonction \(f(x) = \frac{1}{x}\). En quel point cette
+              fonction est-elle discontinue ?
+            </p>
+            <div class="graph">
+              <img src="./images/graph_ln.png" alt="Graph of 1/x" />
             </div>
-        
-            <div class="question">
-                <p>Question 2 :</p>
-                <p>Soit la fonction \(f(x) = \frac{1}{x}\). En quel point cette fonction est-elle discontinue ?</p>
-                <div class="graph">
-                    <img src="./images/graph_ln.png" alt="Graph of 1/x">
-                </div>
-                <label><input type="radio" name="q2" value="a"> a) En \(\:\) \(x = 1\)</label>
-                <label><input type="radio" name="q2" value="b"> b) En \(\:\) \(x = 0\)</label>
-                <label><input type="radio" name="q2" value="c"> c) En \(\:\) \(x = -1\)</label>
-                <label><input type="radio" name="q2" value="d"> d) En \(\:\) \(x = \infty\)</label>
-                <button onclick="checkAnswercontinue(2)">Vérifier la réponse</button>
-                <div id="result_continue2" class="result"></div>
+            <label
+              ><input type="radio" name="q2" value="a" /> a) En \(\:\) \(x =
+              1\)</label
+            >
+            <label
+              ><input type="radio" name="q2" value="b" /> b) En \(\:\) \(x =
+              0\)</label
+            >
+            <label
+              ><input type="radio" name="q2" value="c" /> c) En \(\:\) \(x =
+              -1\)</label
+            >
+            <label
+              ><input type="radio" name="q2" value="d" /> d) En \(\:\) \(x =
+              \infty\)</label
+            >
+            <button onclick="checkAnswercontinue(2)">
+              Vérifier la réponse
+            </button>
+            <div id="result_continue2" class="result"></div>
+          </div>
+
+          <div class="question">
+            <p>Question 3 :</p>
+            <p>
+              Soit la fonction \(f(x) = \ln(x)\). La fonction est-elle continue
+              sur \(\mathbb{R}\) ?
+            </p>
+            <div class="graph">
+              <img src="./images/graph_lnx.png" alt="Graph of ln(x)" />
             </div>
-        
-            <div class="question">
-                <p>Question 3 :</p>
-                <p>Soit la fonction \(f(x) = \ln(x)\). La fonction est-elle continue sur \(\mathbb{R}\) ?</p>
-                <div class="graph">
-                    <img src="./images/graph_lnx.png" alt="Graph of ln(x)">
-                </div>
-                <label><input type="radio" name="q3" value="a"> a) Oui, sur tout \(\;\) \(\mathbb{R}\)</label>
-                <label><input type="radio" name="q3" value="b"> b) Non, elle est discontinue en \(\;\) \(x = 0\)</label>
-                <label><input type="radio" name="q3" value="c"> c) Non, elle est continue uniquement sur \(\;\) \(]0, +\infty[\)</label>
-                <label><input type="radio" name="q3" value="d"> d) Non, elle est discontinue en \(\;\) \(x = 1\)</label>
-                <button onclick="checkAnswercontinue(3)">Vérifier la réponse</button>
-                <div id="result_continue3" class="result"></div>
+            <label
+              ><input type="radio" name="q3" value="a" /> a) Oui, sur tout
+              \(\;\) \(\mathbb{R}\)</label
+            >
+            <label
+              ><input type="radio" name="q3" value="b" /> b) Non, elle est
+              discontinue en \(\;\) \(x = 0\)</label
+            >
+            <label
+              ><input type="radio" name="q3" value="c" /> c) Non, elle est
+              continue uniquement sur \(\;\) \(]0, +\infty[\)</label
+            >
+            <label
+              ><input type="radio" name="q3" value="d" /> d) Non, elle est
+              discontinue en \(\;\) \(x = 1\)</label
+            >
+            <button onclick="checkAnswercontinue(3)">
+              Vérifier la réponse
+            </button>
+            <div id="result_continue3" class="result"></div>
+          </div>
+
+          <div class="question">
+            <p>Question 4 :</p>
+            <p>
+              Si une fonction admet un saut en \(x = a\), quel type de
+              discontinuité a-t-elle en ce point ?
+            </p>
+            <label
+              ><input type="radio" name="q4" value="a" /> a) Discontinuité
+              essentielle</label
+            >
+            <label
+              ><input type="radio" name="q4" value="b" /> b) Discontinuité de
+              première espèce</label
+            >
+            <label
+              ><input type="radio" name="q4" value="c" /> c) Discontinuité de
+              seconde espèce</label
+            >
+            <label
+              ><input type="radio" name="q4" value="d" /> d) Pas de
+              discontinuité</label
+            >
+            <button onclick="checkAnswercontinue(4)">
+              Vérifier la réponse
+            </button>
+            <div id="result_continue4" class="result"></div>
+          </div>
+
+          <div class="question">
+            <p>Question 5 :</p>
+            <p>
+              La fonction \(f(x) = \begin{cases} x^2 & \text{si } x \neq 1 \\ 3
+              & \text{si } x = 1 \end{cases}\) est-elle continue en \(x = 1\) ?
+            </p>
+            <div class="graph">
+              <img src="./images/graph19.png" alt="f(x) = If(x == 1, 3, x^2)" />
             </div>
-        
-            <div class="question">
-                <p>Question 4 :</p>
-                <p>Si une fonction admet un saut en \(x = a\), quel type de discontinuité a-t-elle en ce point ?</p>
-                <label><input type="radio" name="q4" value="a"> a) Discontinuité essentielle</label>
-                <label><input type="radio" name="q4" value="b"> b) Discontinuité de première espèce</label>
-                <label><input type="radio" name="q4" value="c"> c) Discontinuité de seconde espèce</label>
-                <label><input type="radio" name="q4" value="d"> d) Pas de discontinuité</label>
-                <button onclick="checkAnswercontinue(4)">Vérifier la réponse</button>
-                <div id="result_continue4" class="result"></div>
+            <label
+              ><input type="radio" name="q5" value="a" /> a) Oui, elle est
+              continue en \(\;\) \(x = 1\)</label
+            >
+            <label
+              ><input type="radio" name="q5" value="b" /> b) Non, elle a une
+              discontinuité de première espèce en \(\;\) \(x = 1\)</label
+            >
+            <label
+              ><input type="radio" name="q5" value="c" /> c) Non, elle a une
+              discontinuité essentielle en \(\;\) \(x = 1\)</label
+            >
+            <label
+              ><input type="radio" name="q5" value="d" /> d) Non, elle est
+              discontinue en tout point</label
+            >
+            <button onclick="checkAnswercontinue(5)">
+              Vérifier la réponse
+            </button>
+            <div id="result_continue5" class="result"></div>
+          </div>
+
+          <div class="question">
+            <p>Question 6 :</p>
+            <p>
+              La fonction \(f(x) = \frac{x^2-1}{x-1}\) est-elle continue en \(x
+              = 1\) ?
+            </p>
+            <div class="graph">
+              <img src="./images/graph20.png" alt="(x^2-1)/(x-1)" />
             </div>
-        
-            <div class="question">
-                <p>Question 5 :</p>
-                <p>La fonction \(f(x) = \begin{cases} x^2 & \text{si } x \neq 1 \\ 3 & \text{si } x = 1 \end{cases}\) est-elle continue en \(x = 1\) ?</p>
-                <div class="graph">
-                    <img src="./images/graph19.png" alt="f(x) = If(x == 1, 3, x^2)">
-                </div>
-                <label><input type="radio" name="q5" value="a"> a) Oui, elle est continue en \(\;\) \(x = 1\)</label>
-                <label><input type="radio" name="q5" value="b"> b) Non, elle a une discontinuité de première espèce en \(\;\) \(x = 1\)</label>
-                <label><input type="radio" name="q5" value="c"> c) Non, elle a une discontinuité essentielle en \(\;\) \(x = 1\)</label>
-                <label><input type="radio" name="q5" value="d"> d) Non, elle est discontinue en tout point</label>
-                <button onclick="checkAnswercontinue(5)">Vérifier la réponse</button>
-                <div id="result_continue5" class="result"></div>
+            <label
+              ><input type="radio" name="q6" value="a" /> a) Oui, elle est
+              continue en \(\;\) \(x = 1\)</label
+            >
+            <label
+              ><input type="radio" name="q6" value="b" /> b) Non, elle est
+              discontinue en \(\;\) \(x = 1\)</label
+            >
+            <label
+              ><input type="radio" name="q6" value="c" /> c) Oui, après
+              simplification</label
+            >
+            <label
+              ><input type="radio" name="q6" value="d" /> d) Non, elle est
+              continue uniquement en \(\;\) \(x = 0\)</label
+            >
+            <button onclick="checkAnswercontinue(6)">
+              Vérifier la réponse
+            </button>
+            <div id="result_continue6" class="result"></div>
+          </div>
+
+          <div class="question">
+            <p>Question 7 :</p>
+            <p>
+              Soit \(f(x) = |x|\). Cette fonction est-elle continue en \(x = 0\)
+              ?
+            </p>
+            <div class="graph">
+              <img src="./images/graph21.png" alt="|x|" />
             </div>
-        
-            <div class="question">
-                <p>Question 6 :</p>
-                <p>La fonction \(f(x) = \frac{x^2-1}{x-1}\) est-elle continue en \(x = 1\) ?</p>
-                <div class="graph">
-                    <img src="./images/graph20.png" alt="(x^2-1)/(x-1)">
-                </div>
-                <label><input type="radio" name="q6" value="a"> a) Oui, elle est continue en \(\;\) \(x = 1\)</label>
-                <label><input type="radio" name="q6" value="b"> b) Non, elle est discontinue en \(\;\) \(x = 1\)</label>
-                <label><input type="radio" name="q6" value="c"> c) Oui, après simplification</label>
-                <label><input type="radio" name="q6" value="d"> d) Non, elle est continue uniquement en \(\;\) \(x = 0\)</label>
-                <button onclick="checkAnswercontinue(6)">Vérifier la réponse</button>
-                <div id="result_continue6" class="result"></div>
+            <label
+              ><input type="radio" name="q7" value="a" /> a) Oui, elle est
+              continue en \(\;\) \(x = 0\)</label
+            >
+            <label
+              ><input type="radio" name="q7" value="b" /> b) Non, elle est
+              discontinue en \(\;\) \(x = 0\)</label
+            >
+            <label
+              ><input type="radio" name="q7" value="c" /> c) Oui, mais seulement
+              sur \(\;\) \([0, +\infty[\)</label
+            >
+            <label
+              ><input type="radio" name="q7" value="d" /> d) Non, elle est
+              continue uniquement sur \(\;\) \(\mathbb{R}^*\)</label
+            >
+            <button onclick="checkAnswercontinue(7)">
+              Vérifier la réponse
+            </button>
+            <div id="result_continue7" class="result"></div>
+          </div>
+
+          <div class="question">
+            <p>Question 8 :</p>
+            <p>
+              Soit la fonction \(f(x) = \frac{1}{x^2}\). Est-elle continue en
+              \(x = 0\) ?
+            </p>
+            <div class="graph">
+              <img src="./images/graph22.png" alt="(1)/(x^2)" />
             </div>
-        
-            <div class="question">
-                <p>Question 7 :</p>
-                <p>Soit \(f(x) = |x|\). Cette fonction est-elle continue en \(x = 0\) ?</p>
-                <div class="graph">
-                    <img src="./images/graph21.png" alt="|x|">
-                </div>
-                <label><input type="radio" name="q7" value="a"> a) Oui, elle est continue en \(\;\) \(x = 0\)</label>
-                <label><input type="radio" name="q7" value="b"> b) Non, elle est discontinue en \(\;\) \(x = 0\)</label>
-                <label><input type="radio" name="q7" value="c"> c) Oui, mais seulement sur \(\;\) \([0, +\infty[\)</label>
-                <label><input type="radio" name="q7" value="d"> d) Non, elle est continue uniquement sur \(\;\) \(\mathbb{R}^*\)</label>
-                <button onclick="checkAnswercontinue(7)">Vérifier la réponse</button>
-                <div id="result_continue7" class="result"></div>
+            <label
+              ><input type="radio" name="q8" value="a" /> a) Oui, elle est
+              continue en \(\;\) \(x = 0\)</label
+            >
+            <label
+              ><input type="radio" name="q8" value="b" /> b) Non, elle a une
+              discontinuité de première espèce en \(\;\) \(x = 0\)</label
+            >
+            <label
+              ><input type="radio" name="q8" value="c" /> c) Non, elle a une
+              discontinuité essentielle en \(\;\) \(x = 0\)</label
+            >
+            <label
+              ><input type="radio" name="q8" value="d" /> d) Non, elle est
+              continue uniquement sur \(\;\) \(\mathbb{R}^*\)</label
+            >
+            <button onclick="checkAnswercontinue(8)">
+              Vérifier la réponse
+            </button>
+            <div id="result_continue8" class="result"></div>
+          </div>
+
+          <div class="question">
+            <p>Question 9 :</p>
+            <p>
+              Si une fonction est continue sur un intervalle fermé et borné, que
+              peut-on dire de son image ?
+            </p>
+            <label
+              ><input type="radio" name="q9" value="a" /> a) Son image est un
+              intervalle fermé et borné</label
+            >
+            <label
+              ><input type="radio" name="q9" value="b" /> b) Son image est un
+              intervalle ouvert</label
+            >
+            <label
+              ><input type="radio" name="q9" value="c" /> c) Son image n'est pas
+              bornée</label
+            >
+            <label
+              ><input type="radio" name="q9" value="d" /> d) Son image est un
+              intervalle semi-ouvert</label
+            >
+            <button onclick="checkAnswercontinue(9)">
+              Vérifier la réponse
+            </button>
+            <div id="result_continue9" class="result"></div>
+          </div>
+
+          <div class="question">
+            <p>Question 10 :</p>
+            <p>
+              Soit \(f(x) = \frac{1}{x-2}\). Quelle est la nature de la
+              discontinuité en \(x = 2\) ?
+            </p>
+            <div class="graph">
+              <img src="./images/graph23.png" alt="(1)/(x-2)" />
             </div>
-        
-            <div class="question">
-                <p>Question 8 :</p>
-                <p>Soit la fonction \(f(x) = \frac{1}{x^2}\). Est-elle continue en \(x = 0\) ?</p>
-                <div class="graph">
-                    <img src="./images/graph22.png" alt="(1)/(x^2)">
-                </div>
-                <label><input type="radio" name="q8" value="a"> a) Oui, elle est continue en \(\;\) \(x = 0\)</label>
-                <label><input type="radio" name="q8" value="b"> b) Non, elle a une discontinuité de première espèce en \(\;\) \(x = 0\)</label>
-                <label><input type="radio" name="q8" value="c"> c) Non, elle a une discontinuité essentielle en \(\;\) \(x = 0\)</label>
-                <label><input type="radio" name="q8" value="d"> d) Non, elle est continue uniquement sur \(\;\) \(\mathbb{R}^*\)</label>
-                <button onclick="checkAnswercontinue(8)">Vérifier la réponse</button>
-                <div id="result_continue8" class="result"></div>
-            </div>    
-            
-            <div class="question">
-                <p>Question 9 :</p>
-                <p>Si une fonction est continue sur un intervalle fermé et borné, que peut-on dire de son image ?</p>
-                <label><input type="radio" name="q9" value="a"> a) Son image est un intervalle fermé et borné</label>
-                <label><input type="radio" name="q9" value="b"> b) Son image est un intervalle ouvert</label>
-                <label><input type="radio" name="q9" value="c"> c) Son image n'est pas bornée</label>
-                <label><input type="radio" name="q9" value="d"> d) Son image est un intervalle semi-ouvert</label>
-                <button onclick="checkAnswercontinue(9)">Vérifier la réponse</button>
-                <div id="result_continue9" class="result"></div>
-            </div>
-            
-            <div class="question">
-                <p>Question 10 :</p>
-                <p>Soit \(f(x) = \frac{1}{x-2}\). Quelle est la nature de la discontinuité en \(x = 2\) ?</p>
-                <div class="graph">
-                    <img src="./images/graph23.png" alt="(1)/(x-2)">
-                </div>
-                <label><input type="radio" name="q10" value="a"> a) Discontinuité de première espèce</label>
-                <label><input type="radio" name="q10" value="b"> b) Discontinuité de seconde espèce</label>
-                <label><input type="radio" name="q10" value="c"> c) Discontinuité essentielle</label>
-                <label><input type="radio" name="q10" value="d"> d) Pas de discontinuité</label>
-                <button onclick="checkAnswercontinue(10)">Vérifier la réponse</button>
-                <div id="result_continue10" class="result"></div>
-            </div>            
+            <label
+              ><input type="radio" name="q10" value="a" /> a) Discontinuité de
+              première espèce</label
+            >
+            <label
+              ><input type="radio" name="q10" value="b" /> b) Discontinuité de
+              seconde espèce</label
+            >
+            <label
+              ><input type="radio" name="q10" value="c" /> c) Discontinuité
+              essentielle</label
+            >
+            <label
+              ><input type="radio" name="q10" value="d" /> d) Pas de
+              discontinuité</label
+            >
+            <button onclick="checkAnswercontinue(10)">
+              Vérifier la réponse
+            </button>
+            <div id="result_continue10" class="result"></div>
+          </div>
         </div>
 
-
         <div class="flex-container">
-            <div class="question">
-                <p><strong>Déterminer si la fonction suivante est continue en x = 2 :</strong></p>
-                <p>\( f(x) = \begin{cases} 
-                    x^2 - 4 & \text{si } x < 2 \\
-                    2x - 2 & \text{si } x \geq 2
-                \end{cases} \)</p>
-                <p>La fonction est-elle continue en x = 2 ? <input type="text" id="answer1" placeholder="Oui ou Non"></p>
-                <button onclick="checkAnswer_continuity(1)">Vérifier</button>
-                <button onclick="revealAnswer_c(1)">Révéler la réponse</button>
-                <p id="feedback1"></p>
-                <div id="correctAnswer1" style="display:none;">
-                    <p><strong>Explication:</strong> Pour que la fonction soit continue en x = 2, les limites à gauche et à droite doivent être égales à f(2). Ici, \( \lim_{x \to 2^-} f(x) = 0 \), \( \lim_{x \to 2^+} f(x) = 2 \), et f(2) = 2. La fonction n'est donc pas continue en x = 2.</p>
-                </div>
+          <div class="question">
+            <p>
+              <strong
+                >Déterminer si la fonction suivante est continue en x = 2
+                :</strong
+              >
+            </p>
+            <p>
+              \( f(x) = \begin{cases} x^2 - 4 & \text{si } x < 2 \\ 2x - 2 &
+              \text{si } x \geq 2 \end{cases} \)
+            </p>
+            <p>
+              La fonction est-elle continue en x = 2 ?
+              <input type="text" id="answer1" placeholder="Oui ou Non" />
+            </p>
+            <button onclick="checkAnswer_continuity(1)">Vérifier</button>
+            <button onclick="revealAnswer_c(1)">Révéler la réponse</button>
+            <p id="feedback1"></p>
+            <div id="correctAnswer1" style="display: none">
+              <p>
+                <strong>Explication:</strong> Pour que la fonction soit continue
+                en x = 2, les limites à gauche et à droite doivent être égales à
+                f(2). Ici, \( \lim_{x \to 2^-} f(x) = 0 \), \( \lim_{x \to 2^+}
+                f(x) = 2 \), et f(2) = 2. La fonction n'est donc pas continue en
+                x = 2.
+              </p>
             </div>
-        
-            <div class="question">
-                <p><strong>Trouver la valeur de k pour que la fonction soit continue en x = 1 :</strong></p>
-                <p>\( g(x) = \begin{cases} 
-                    x^2 + 1 & \text{si } x < 1 \\
-                    kx + 2 & \text{si } x \geq 1
-                \end{cases} \)</p>
-                <p>k = <input type="text" id="answer2" placeholder="Valeur de k"></p>
-                <button onclick="checkAnswer_continuity(2)">Vérifier</button>
-                <button onclick="revealAnswer_c(2)">Révéler la réponse</button>
-                <p id="feedback2"></p>
-                <div id="correctAnswer2" style="display:none;">
-                    <p><strong>Explication:</strong> Pour que la fonction soit continue en x = 1, on doit avoir \( \lim_{x \to 1^-} g(x) = \lim_{x \to 1^+} g(x) = g(1) \). Donc, 1^2 + 1 = k(1) + 2, ce qui donne k = 0.</p>
-                </div>
+          </div>
+
+          <div class="question">
+            <p>
+              <strong
+                >Trouver la valeur de k pour que la fonction soit continue en x
+                = 1 :</strong
+              >
+            </p>
+            <p>
+              \( g(x) = \begin{cases} x^2 + 1 & \text{si } x < 1 \\ kx + 2 &
+              \text{si } x \geq 1 \end{cases} \)
+            </p>
+            <p>
+              k = <input type="text" id="answer2" placeholder="Valeur de k" />
+            </p>
+            <button onclick="checkAnswer_continuity(2)">Vérifier</button>
+            <button onclick="revealAnswer_c(2)">Révéler la réponse</button>
+            <p id="feedback2"></p>
+            <div id="correctAnswer2" style="display: none">
+              <p>
+                <strong>Explication:</strong> Pour que la fonction soit continue
+                en x = 1, on doit avoir \( \lim_{x \to 1^-} g(x) = \lim_{x \to
+                1^+} g(x) = g(1) \). Donc, 1^2 + 1 = k(1) + 2, ce qui donne k =
+                0.
+              </p>
             </div>
-        
-            <div class="question">
-                <p><strong>La fonction suivante est-elle continue sur tout son domaine de définition ?</strong></p>
-                <p>\( h(x) = \frac{x^2 - 1}{x - 1} \)</p>
-                <p>Réponse : <input type="text" id="answer3" placeholder="Oui ou Non"></p>
-                <button onclick="checkAnswer_continuity(3)">Vérifier</button>
-                <button onclick="revealAnswer_c(3)">Révéler la réponse</button>
-                <p id="feedback3"></p>
-                <div id="correctAnswer3" style="display:none;">
-                    <p><strong>Explication:</strong> La fonction n'est pas définie en x = 1, mais elle peut être prolongée par continuité en ce point. En effet, \( \lim_{x \to 1} h(x) = 2 \). Donc, si on définit h(1) = 2, la fonction devient continue sur tout ℝ.</p>
-                </div>
+          </div>
+
+          <div class="question">
+            <p>
+              <strong
+                >La fonction suivante est-elle continue sur tout son domaine de
+                définition ?</strong
+              >
+            </p>
+            <p>\( h(x) = \frac{x^2 - 1}{x - 1} \)</p>
+            <p>
+              Réponse :
+              <input type="text" id="answer3" placeholder="Oui ou Non" />
+            </p>
+            <button onclick="checkAnswer_continuity(3)">Vérifier</button>
+            <button onclick="revealAnswer_c(3)">Révéler la réponse</button>
+            <p id="feedback3"></p>
+            <div id="correctAnswer3" style="display: none">
+              <p>
+                <strong>Explication:</strong> La fonction n'est pas définie en x
+                = 1, mais elle peut être prolongée par continuité en ce point.
+                En effet, \( \lim_{x \to 1} h(x) = 2 \). Donc, si on définit
+                h(1) = 2, la fonction devient continue sur tout ℝ.
+              </p>
             </div>
-        
-            <div class="question">
-                <p><strong>Déterminer si la fonction suivante est continue en x = 0 :</strong></p>
-                <p>\( f(x) = \begin{cases} 
-                    \sin(x)/x & \text{si } x \neq 0 \\
-                    1 & \text{si } x = 0
-                \end{cases} \)</p>
-                <p>La fonction est-elle continue en x = 0 ? <input type="text" id="answer4" placeholder="Oui ou Non"></p>
-                <button onclick="checkAnswer_continuity(4)">Vérifier</button>
-                <button onclick="revealAnswer_c(4)">Révéler la réponse</button>
-                <p id="feedback4"></p>
-                <div id="correctAnswer4" style="display:none;">
-                    <p><strong>Explication:</strong> Cette fonction est continue en x = 0. En effet, \( \lim_{x \to 0} \frac{\sin(x)}{x} = 1 \), ce qui correspond à la valeur définie pour f(0).</p>
-                </div>
+          </div>
+
+          <div class="question">
+            <p>
+              <strong
+                >Déterminer si la fonction suivante est continue en x = 0
+                :</strong
+              >
+            </p>
+            <p>
+              \( f(x) = \begin{cases} \sin(x)/x & \text{si } x \neq 0 \\ 1 &
+              \text{si } x = 0 \end{cases} \)
+            </p>
+            <p>
+              La fonction est-elle continue en x = 0 ?
+              <input type="text" id="answer4" placeholder="Oui ou Non" />
+            </p>
+            <button onclick="checkAnswer_continuity(4)">Vérifier</button>
+            <button onclick="revealAnswer_c(4)">Révéler la réponse</button>
+            <p id="feedback4"></p>
+            <div id="correctAnswer4" style="display: none">
+              <p>
+                <strong>Explication:</strong> Cette fonction est continue en x =
+                0. En effet, \( \lim_{x \to 0} \frac{\sin(x)}{x} = 1 \), ce qui
+                correspond à la valeur définie pour f(0).
+              </p>
             </div>
-        
-            <div class="question">
-                <p><strong>La fonction exponentielle est-elle continue sur ℝ ?</strong></p>
-                <p>\( g(x) = e^x \)</p>
-                <p>Réponse : <input type="text" id="answer5" placeholder="Oui ou Non"></p>
-                <button onclick="checkAnswer_continuity(5)">Vérifier</button>
-                <button onclick="revealAnswer_c(5)">Révéler la réponse</button>
-                <p id="feedback5"></p>
-                <div id="correctAnswer5" style="display:none;">
-                    <p><strong>Explication:</strong> Oui, la fonction exponentielle est continue sur tout ℝ. Elle est dérivable (et donc continue) en tout point, et sa dérivée est elle-même continue.</p>
-                </div>
+          </div>
+
+          <div class="question">
+            <p>
+              <strong
+                >La fonction exponentielle est-elle continue sur ℝ ?</strong
+              >
+            </p>
+            <p>\( g(x) = e^x \)</p>
+            <p>
+              Réponse :
+              <input type="text" id="answer5" placeholder="Oui ou Non" />
+            </p>
+            <button onclick="checkAnswer_continuity(5)">Vérifier</button>
+            <button onclick="revealAnswer_c(5)">Révéler la réponse</button>
+            <p id="feedback5"></p>
+            <div id="correctAnswer5" style="display: none">
+              <p>
+                <strong>Explication:</strong> Oui, la fonction exponentielle est
+                continue sur tout ℝ. Elle est dérivable (et donc continue) en
+                tout point, et sa dérivée est elle-même continue.
+              </p>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
     </section>
-    
+
     <footer>
-        <p>Chavamaths est une plateforme de mathématiques en ligne qui propose des cours, des exercices et des calculatrices
-            en ligne pour les étudiants de tous les niveaux.</p>
-      <p>Graphiques utilisés dans le site sont issues de <a href="https://www.geogebra.org/calculator">Geogebra</a> et de <a href="https://idealcalculator.com/piecewise-function-calculator-grapher/">Ideal Calculator</a></p>
+      <p>
+        Chavamaths est une plateforme de mathématiques en ligne qui propose des
+        cours et des exercices en ligne pour les étudiants.
+      </p>
+      <p>
+        Graphiques utilisés dans le site sont issues de
+        <a href="https://www.geogebra.org/calculator">Geogebra</a> et de
+        <a
+          href="https://idealcalculator.com/piecewise-function-calculator-grapher/"
+          >Ideal Calculator</a
+        >
+      </p>
       <p>Copyright © 2024 CHAVAMATHS</p>
-  
     </footer>
 
     <script src="exercices.js"></script>
     <script src="js.js"></script>
-</body>
+  </body>
 </html>

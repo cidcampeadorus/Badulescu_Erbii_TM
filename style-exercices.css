@@ -497,93 +497,93 @@ section {
 /* Pour les écrans de moins de 768px */
 
 @media screen and (max-width: 768px) {
-    .flex-container {
-        width: 95%;
-        margin: 0 auto;
-    }
+  .flex-container {
+    width: 95%;
+    margin: 0 auto;
+  }
 
-    .qcm {
-        padding: 10px;
-    }
+  .qcm {
+    padding: 10px;
+  }
 
-    .question {
-        padding: 10px;
-        margin-bottom: 20px;
-    }
+  .question {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
 
-    .qcm label {
-        padding: 15px;
-        font-size: 14px;
-        min-height: auto;
-        height: auto;
-        width: 90%;
-    }
+  .qcm label {
+    padding: 15px;
+    font-size: 14px;
+    min-height: auto;
+    height: auto;
+    width: 90%;
+  }
 
-    .graph img {
-        max-width: 100%;
-        height: auto;
-    }
+  .graph img {
+    max-width: 100%;
+    height: auto;
+  }
 
-    button {
-        width: 100%;
-        margin: 10px 0;
-    }
+  button {
+    width: 100%;
+    margin: 10px 0;
+  }
 
-    .exo-titre-title {
-        font-size: 1.8rem;
-    }
+  .exo-titre-title {
+    font-size: 1.8rem;
+  }
 
-    .exo-titre-description {
-        font-size: 1rem;
-        padding: 0 15px;
-    }
+  .exo-titre-description {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
 
-    /* Ajustements pour la calculatrice */
-    .calculatrice-wrapper {
-        height: auto;
-        padding: 20px 10px;
-    }
+  /* Ajustements pour la calculatrice */
+  .calculatrice-wrapper {
+    height: auto;
+    padding: 20px 10px;
+  }
 
-    #calculatrice {
-        width: 95%;
-        margin: 0 auto;
-    }
+  #calculatrice {
+    width: 95%;
+    margin: 0 auto;
+  }
 
-    #function-input {
-        width: 100%;
-        font-size: 14px;
-    }
+  #function-input {
+    width: 100%;
+    font-size: 14px;
+  }
 
-    #derivative-result {
-        font-size: 14px;
-        padding: 5px;
-    }
+  #derivative-result {
+    font-size: 14px;
+    padding: 5px;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .qcm label {
-        font-size: 13px;
-        padding: 10px;
-    }
+  .qcm label {
+    font-size: 13px;
+    padding: 10px;
+  }
 
-    .question p {
-        font-size: 14px;
-    }
+  .question p {
+    font-size: 14px;
+  }
 
-    .exo-titre-title {
-        font-size: 1.5rem;
-    }
+  .exo-titre-title {
+    font-size: 1.5rem;
+  }
 
-    button {
-        padding: 8px 15px;
-        font-size: 14px;
-    }
+  button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
 
-    .exercise {
-        padding: 15px;
-    }
+  .exercise {
+    padding: 15px;
+  }
 
-    .exercise .answer {
-        padding: 15px;
-    }
+  .exercise .answer {
+    padding: 15px;
+  }
 }
