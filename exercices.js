@@ -314,16 +314,11 @@ function revealAnswer_d(questionNumber) {
 
 // Calculatrice de dérivées
 function calculateDerivative() {
-  let input = document.getElementById("function-input").value;
-  const feedback = document.getElementById("feedback-calculator");
+  let input = document.getElementById("function-input").value; //Entree utilisateur
+  const feedback = document.getElementById("feedback-calculator"); 
   const result = document.getElementById("result");
   const derivativeResult = document.getElementById("derivative-result");
 
-  // réglages en cas de mulplications de paranthèses ou d'oubli de *
-  input = input.replace(/(\d+|[)])(\()/g, "$1*$2"); // Ajoute * entre un nombre/parenthèse fermante et une parenthèse ouvrante
-  input = input.replace(/\)(\w|\d)/g, ")*$1"); // Ajoute * entre une parenthèse fermante et une lettre/nombre
-  input = input.replace(/(\w|\d)\(/g, "$1*("); // Ajoute * entre une lettre/nombre et une parenthèse ouvrante
-  // --> pour comprendre les règles de regex(expressions régulières), voir https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Regular_expressions
   try {
     const derivative = Algebrite.derivative(input, "x").toString();
     feedback.textContent = "Calcul réussi !";
