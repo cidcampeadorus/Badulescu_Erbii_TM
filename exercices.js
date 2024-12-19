@@ -314,26 +314,28 @@ function revealAnswer_d(questionNumber) {
 
 // Calculatrice de dérivées
 function calculateDerivative() {
+  // Récupération des id du html
   let input = document.getElementById("function-input").value; //Entree utilisateur
   const feedback = document.getElementById("feedback-calculator"); 
   const result = document.getElementById("result");
   const derivativeResult = document.getElementById("derivative-result");
-
+//Calculatrice 
   try {
-    const derivative = Algebrite.derivative(input, "x").toString();
+    const derivative = Algebrite.derivative(input, "x").toString(); //A partir d'une fonction Algebrite va dériver l'entrée de l'utilisateur
+    //Affichage du résultaut
     feedback.textContent = "Calcul réussi !";
     feedback.style.color = "green";
     derivativeResult.innerHTML =
       "$ \\frac{d}{dx}(" + input + ") = " + derivative + "$";
     result.style.display = "block";
-
+//Inerprete le résultat en Mathjax
     MathJax.typesetPromise([result])
       .then(() => {
         console.log("Derivative rendered successfully");
       })
       .catch((err) => console.log("Error rendering derivative:", err));
   } catch (error) {
-    feedback.textContent = "Erreur dans le calcul. Vérifiez votre entrée.";
+    feedback.textContent = "Erreur dans le calcul. Vérifiez votre entrée.";  
     feedback.style.color = "red";
     result.style.display = "none";
   }
